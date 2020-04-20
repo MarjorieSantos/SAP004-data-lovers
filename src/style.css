@@ -8,13 +8,15 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     letter-spacing: 0.5px;
+    background: #DEF5FE;
 }
 
 .container {
-	width: 980px;
+    width: 100%;
+    max-width: 980px;
 	margin: 0 auto;
 	padding: 0px;
-	position: relative;
+    position: relative;
 }
 
 .header {
@@ -53,37 +55,64 @@ body{
     width: 230px;
 }
 
+
 /*    main   */
-.principal{
-    background: #DEF5FE;
-}
 
 .principal .filter-for {
     display: flex;
-    justify-content: center;
-    background: #048ABF;
+    justify-content: space-between;
     width: 100%;
     padding: 15px;
 }
 
-.campos{
-   
+.principal .filter{
+    background: #048ABF;
 }
 
 label{
     margin-left: 20px;
 }
 
-
 input, select{
     border: 1px solid white;
     border-radius: 50px;
     background: transparent;
     padding: 8px;
-    color: white;
+    font-weight: bold;
     text-align: center;
     margin-right: 10px;
 }
+
+.card{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin-top: 50px;
+}
+
+.cards{
+    width: 260px;
+    height: 350px;
+    background: white;
+    border: 2px solid #D94A4A;
+    border-radius: 60px;
+    padding: 20px 0;
+}
+
+.cards img{
+    margin-left: 65px;
+}
+
+.cards ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+.cards ul li{
+    padding: 5px;
+}
+
+/*  footer */
 
 .footer{
     width: 100%;
@@ -105,6 +134,6 @@ input, select{
     margin-left: 50px;
 }
 
-.footer a img{
+.footer a i{
     max-width: 60px;
 }

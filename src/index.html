@@ -6,6 +6,7 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/89e9543c3c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,20 +23,34 @@
     </section>
   </header>
   <main class="principal">
-    <section class="filter-for container">
-      <div class="campos">
-        <label for="search">Pesquisar:</label>
-        <input type="text" id="search">
+    <section class="filter">
+      <div class="container filter-for">
+        <div>
+          <label for="search">Pesquisar:</label>
+          <input type="text" id="search">
+        </div>
+        <div>
+          <label for="filter">Filtrar por:</label>
+          <select name="filter" id="filter" class="campos">
+            <option>A-Z</option>
+            <option>NÚMERO</option>
+          </select>
+        </div>
+        <div>
+          <input type="button" value="LIMPAR" class="campos">
+        </div>
       </div>
-      <div class="campos">
-        <label for="filter">Filtrar por:</label>
-        <select name="filter" id="filter" class="campos">
-          <option>A-Z</option>
-          <option>NÚMERO</option>
-        </select>
-      </div>
-      <div class="campos">
-        <input type="button" value="LIMPAR" class="campos">
+    </section>
+
+    <section class="container card">
+      <div class="cards">
+        <img src="http://www.serebii.net/pokemongo/pokemon/001.png" alt="Bulbasaur">
+        <ul>
+          <li>Nome:</li>
+          <li>Nº:</li>
+          <li>Tipo:</li>
+          <li>Poder:</li>
+        </ul>
       </div>
     </section>
   </main>
@@ -43,10 +58,9 @@
     <section class="copy container">
       <p>Copyright Marjorie & Jucielly</p>
       <section class="links-externos">
-        <a href="https://www.pokemon.com/br/"> <img src="assets/logo01 (1).png" alt="Link Pokemon Page"></a>
-        <a href="https://www.pokemongo.com/pt-pt/"> <img src="assets/logo01 (2).png" alt="Link Pokemon Go Page"></a>
-        <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q"> <img src="assets/logo01 (3).png"
-            alt="Link Pokemon Channel Youtube"></a>
+        <a href="https://www.pokemon.com/br/"> </a>
+         <a href="https://www.pokemongo.com/pt-pt/">  </a>
+        <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q"> <i class="fab fa-youtube"></i> </a>
       </section>
     </section>
   </footer>
