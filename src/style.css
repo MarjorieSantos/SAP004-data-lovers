@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+	padding: 0px;
+	position: relative;
+}
+
+.header {
+    background: #073583;
+    padding: 40px 0;
+}
+
+.header .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .menu-nav{
+    display: inline-block;
+}
+
+.header .menu-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header .menu-nav ul li{
+    list-style: none;
+    display: inline;
+}
+
+.header .menu-nav a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 5px;
+}
+
+.header img{
+    width: 230px;
+}
+
+/*    main   */
+.principal{
+    background: #DEF5FE;
+}
+
+.principal .filter-for {
+    display: flex;
+    justify-content: center;
+    background: #048ABF;
+    width: 100%;
+    padding: 15px;
+}
+
+.campos{
+   
+}
+
+label{
+    margin-left: 20px;
+}
+
+
+input, select{
+    border: 1px solid white;
+    border-radius: 50px;
+    background: transparent;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.footer{
+    width: 100%;
+    background: #073583;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer .copy{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    color: white;
+}
+
+.footer .links-externos{
+    margin-left: 50px;
+}
+
+.footer a img{
+    max-width: 60px;
+}
