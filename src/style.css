@@ -83,11 +83,15 @@ input, select{
     margin-right: 10px;
 }
 
+/*  main  cards*/
+
 .card{
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center; */
+    flex-wrap: wrap;
+    align-items: center;
     margin-top: 50px;
+
 }
 
 .cards{
@@ -97,6 +101,7 @@ input, select{
     border: 2px solid #D94A4A;
     border-radius: 60px;
     padding: 20px 0;
+    margin-bottom: 50px;
 }
 
 .cards img{
@@ -117,7 +122,7 @@ input, select{
 .footer{
     width: 100%;
     background: #073583;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -131,9 +136,14 @@ input, select{
 }
 
 .footer .links-externos{
-    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.footer a{
+    text-decoration: none;
 }
 
 .footer a i{
-    max-width: 60px;
+    color: #D94A4A;
+    padding-right: 10px;
 }
