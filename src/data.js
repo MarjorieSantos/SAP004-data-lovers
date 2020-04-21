@@ -9,29 +9,49 @@ export const filterData = (listPokemon, pokemonInfo) => {
 
 
 export const sortData = (data, infoBy, infoOrder) => {
-    if(infoOrder === "A-Z"){
-      data.sort(function(a, b){
-        if (a[infoBy] > b[infoBy]) {
-          return 1;
-        }
-        if (a[infoBy] < b[infoBy]) {
-          return -1;
-        }
-        // a must be equal to b
-        return 0;
-      })
-    } else if(infoOrder === "Z-A"){
-      data.sort(function(a, b){
-        if (a[infoBy] < b[infoBy]) {
-          return 1;
-        }
-        if (a[infoBy] > b[infoBy]) {
-          return -1;
-        }
-        // a must be equal to b
-        return 0;
-      })
-    }
+  if (infoOrder === "A-Z") {
+    data.sort(function (a, b) {
+      if (a[infoBy] > b[infoBy]) {
+        return 1;
+      }
+      if (a[infoBy] < b[infoBy]) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    })
+  } else if (infoOrder === "Z-A") {
+    data.sort(function (a, b) {
+      if (a[infoBy] < b[infoBy]) {
+        return 1;
+      }
+      if (a[infoBy] > b[infoBy]) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    })
+  } else if (infoOrder === "1-151") {
+    data.sort(function (a, b) {
+      if (a[infoBy] > b[infoBy]) {
+        return 1
+      }
+      if (a[infoBy] < b[infoBy]) {
+        return -1
+      }
+      return 0;
+    })
+  } else if (infoOrder === "151-1") {
+    data.sort(function (a, b) {
+      if (a[infoBy] < b[infoBy]) {
+        return 1;
+      }
+      if (a[infoBy] > b[infoBy]) {
+        return -1;
+      }
+      return 0;
+    })
+  }
   return data;
 };
 
