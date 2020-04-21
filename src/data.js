@@ -31,7 +31,7 @@ export const sortData = (data, infoBy, infoOrder) => {
       // a must be equal to b
       return 0;
     })
-  } else if (infoOrder === "1-151") {
+  } else if (infoOrder === "ascNum") {
     data.sort(function (a, b) {
       if (a[infoBy] > b[infoBy]) {
         return 1
@@ -41,7 +41,7 @@ export const sortData = (data, infoBy, infoOrder) => {
       }
       return 0;
     })
-  } else if (infoOrder === "151-1") {
+  } else if (infoOrder === "descNum") {
     data.sort(function (a, b) {
       if (a[infoBy] < b[infoBy]) {
         return 1;
