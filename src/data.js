@@ -17,7 +17,6 @@ export const sortData = (data, infoBy, infoOrder) => {
       if (a[infoBy] < b[infoBy]) {
         return -1;
       }
-      // a must be equal to b
       return 0;
     })
   } else if (infoOrder === "Z-A") {
@@ -28,7 +27,6 @@ export const sortData = (data, infoBy, infoOrder) => {
       if (a[infoBy] > b[infoBy]) {
         return -1;
       }
-      // a must be equal to b
       return 0;
     })
   } else if (infoOrder === "ascNum") {
