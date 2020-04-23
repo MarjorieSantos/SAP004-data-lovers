@@ -31,17 +31,21 @@ body{
 }
 
 label{
-    margin-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
 }
 
 input, select{
-    border: 1px solid white;
+    border: 1.5px solid white;
     border-radius: 50px;
     background: transparent;
     padding: 8px;
     font-weight: bold;
     text-align: center;
     margin-right: 10px;
+    color: white;
+}
+
+option{
+    color: black;
 }
