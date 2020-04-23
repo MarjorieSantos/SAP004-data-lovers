@@ -50,4 +50,8 @@ option{
     color: black;
 }
 
-/* CARD -> marjorie*/ 
+.footer {
+    margin: 70px;
+    background-color: #048ABF;
+}
+
