@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="244" height="88" viewBox="0 0 244 88">
+  <defs>
+    <filter id="PokeApp" x="5" y="-66" width="236" height="197" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-color="#4074b5"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-custom_1">
+      <rect width="244" height="88"/>
+    </clipPath>
+  </defs>
+  <g id="custom_1" data-name="custom – 1" clip-path="url(#clip-custom_1)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#PokeApp)">
+      <text id="PokeApp-2" data-name="PokeApp" transform="translate(8 -66)" fill="#f2be22" font-size="60" font-family="PokemonSolidNormal, Pokemon Solid"><tspan x="0" y="123">PokeApp</tspan></text>
+    </g>
+  </g>
+</svg>
