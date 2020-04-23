@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "pokemon";
+    src: url(fontes/Pokemon\ Hollow.ttf);
+}
+  
+@font-face {
+    font-family: "pokemonBold";
+    src: url(fontes/Pokemon\ Solid.ttf);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +32,9 @@ body {
   position: relative;
 }
 
+
+
+/*  main  */
 
 .main {
   flex-grow: 1;
