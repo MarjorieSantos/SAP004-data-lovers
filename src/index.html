@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Poke App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/11e9e029cd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <section class="container">
+      <h1 class="main-title">PokeApp</h1>
+      <nav class="menu">
+        <ul>
+          <li> <a href="#home"> Home </a></li>
+          <li> <a href="#sobre"> Sobre </a> </li>
+          <li> <a href="#curiosidades">Curiosidades</a> </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+  <main class="main">
+    <section class="filter-bar">
+      <section class="filter-section container">
+        <div>
+          <label for="search">Pesquisar por nome:</label>
+          <input type="text" id="search">
+        </div>
+        <div>
+          <label for="filter-for">Ordernar por:</label>
+          <select name="filter" id="filter-for">
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+            <option value="crescentOrder">1 à 151</option>
+            <option value="decreasingOrder">151 - 1</option>
+          </select>
+        </div>
+        <div>
+          <input type="button" value="LIMPAR">
+        </div>
+      </section>
+    </section>
+    <section class="cards-section container">
+      <div id="pokemon-list"></div>
+      <div id="no-results-found" style="display: none;">Ops, não achamos esse Pokémon :(</div>
+      <template id="pokemon-template">
+        <div class="card">
+          <h2 class="name">nome</h2>
+          <img class="img" />
+          <span class="num"></span>
+          <span class="type"></span>
+          <span class="wekenesses"></span>
+        </div>
+      </template>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="container">
+      <span class="copy">Desenvolvido por: Marjorie & Jucielly</span>
+      <div class="external-links">
+        <a href="https://www.pokemon.com/br/" target="blank"><i class="fas fa-globe"></i></a>
+        <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q" target="blank"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo" target="blank"><i
+            class="fab fa-google-play"></i></a>
+      </div>
+    </section>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
