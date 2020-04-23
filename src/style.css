@@ -1,57 +1,98 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0; 
-    padding: 0; 
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.5px; 
-    background: #DEF5FE; 
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  letter-spacing: 0.5px;
+  background: #DEF5FE;
+  display: flex;
+  flex-flow: column;
 }
 
 .container {
-    width: 100%;
-    max-width: 980px;
-	margin: 0 auto;
-	padding: 0px;
-    position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
+}
+
+
+.main {
+  flex-grow: 1;
 }
 
 /* filtrar */
 .main .filter-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
 }
 
-.main .filter-bar{
-    background: #048ABF;
+.main .filter-bar {
+  background: #048ABF;
 }
 
-label{
-    font-size: 18px;
-    color: white;
+label {
+  font-size: 18px;
+  color: white;
 }
 
-input, select{
-    border: 1.5px solid white;
-    border-radius: 50px;
-    background: transparent;
-    padding: 8px;
-    font-weight: bold;
-    text-align: center;
-    margin-right: 10px;
-    color: white;
+input,
+select {
+  border: 1.5px solid white;
+  border-radius: 50px;
+  background: transparent;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 10px;
+  color: white;
 }
 
-option{
-    color: black;
+option {
+  color: black;
 }
+
 
 .footer {
-    margin: 70px;
-    background-color: #048ABF;
+  width: 100%;
+  background-color: #048ABF;
+  margin-top: 10em;
+  padding: 1em;
 }
 
+.footer .container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.external-links {
+  display: inline;
+}
+
+.icon {
+  color: white;
+  padding: 0 1em;
+  align-self: end;
+  text-align: end;
+  font-size: 25px;
+
+}
+
+.icon:hover {
+  color: rgb(255, 255, 255, .3);
+  transition: color .3s ease;
+}
+
+.copy {
+  color: white;
+  flex-grow: 1;
+}
