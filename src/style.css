@@ -49,3 +49,9 @@ input, select{
 option{
     color: black;
 }
+
+
+.footer {
+    margin: 70px;
+    background-color: #048ABF;
+}
