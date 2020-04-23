@@ -1,13 +1,27 @@
+/* @font-face {
+    font-family: "pokemon";
+    src: url(fontes/Pokemon\ Hollow.ttf);
+}
+  
+@font-face {
+    font-family: "pokemonBold";
+    src: url(fontes/Pokemon\ Solid.ttf);
+} */
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    margin: 0; 
-    padding: 0; 
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.5px; 
-    background: #DEF5FE; 
+    color: #333;
+    letter-spacing: 0.5px;
+    background: #DEF5FE;
+    display: flex;
+    flex-flow: column;
 }
 
 .container {
@@ -16,6 +30,44 @@ body{
 	margin: 0 auto;
 	padding: 0px;
     position: relative;
+}
+
+/*Header*/
+.header {
+    background: #1C2B59;
+}
+
+.header .menu-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .menu-nav a{
+    text-decoration: none;
+    margin: 30px 0;
+}
+
+.header .menu{
+    margin-right: 20px;
+}
+
+.header .menu ul li{
+    display: inline;
+    list-style: none;
+}
+
+.header .menu ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+
+/*main*/
+.main {
+    flex-grow: 1;
 }
 
 /* filtrar */
@@ -51,6 +103,36 @@ option{
 }
 
 .footer {
-    margin: 70px;
+    width: 100%;
     background-color: #048ABF;
-}
+    bottom: 0;
+    padding: 16px;
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+  
+  .external-links {
+    display: inline;
+  }
+  
+  .icon {
+    color: white;
+    padding: 0 16px;
+    align-self: end;
+    text-align: end;
+    font-size: 25px;
+  }
+  
+  .icon:hover {
+    color: rgb(255, 255, 255, .3);
+    transition: color .3s ease;
+  }
+  
+  .copy {
+    color: white;
+    flex-grow: 1;
+  }
