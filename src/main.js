@@ -26,6 +26,11 @@ const renderPokemon = (pokemon) => {
   const templateDoned = document.importNode(template.content, true)
   pokemonList.appendChild(templateDoned)
 }
+
+const clearPokemonList = () => {
+  pokemonList.innerHTML = ""
+}
+
 const searchByName = () => {
   const searchTerm = searchInput.value
   const result = filterByName(pokemons, searchTerm)
@@ -34,15 +39,12 @@ const searchByName = () => {
 }
 
 const renderAllPokemons = () => {
+  clearPokemonList()
   pokemons.forEach(renderPokemon)
 }
 renderAllPokemons()
 
 
-const clearPokemonList = () => {
-  pokemonList.innerHTML = ""
-}
-
 
 searchInput.addEventListener("keyup", searchByName)
-clearBtn.addEventListener("click", clearPokemonList)
+clearBtn.addEventListener("click", renderAllPokemons)
