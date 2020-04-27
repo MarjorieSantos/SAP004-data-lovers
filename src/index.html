@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-ex.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/89e9543c3c.js" crossorigin="anonymous"></script>
@@ -23,16 +23,16 @@
       </nav>
     </section>
   </header>
-  <main class="principal">
-    <section class="filter">
-      <div class="container filter-for">
+  <main class="main">
+    <section class="filter-bar">
+      <form class="container filter-section">
         <div>
           <label for="search">Pesquisar:</label>
           <input type="text" id="search">
         </div>
         <div>
           <label for="filter">Filtrar por:</label>
-          <select name="filter" id="filter" class="campos">
+          <select name="filter" id="filter" class="focus">
             <option disabled selected value="">Selecione</option>
             <option value="A-Z">A-Z</option>
             <option value="Z-A">Z-A</option>
@@ -41,22 +41,23 @@
           </select>
         </div>
         <div>
-          <input type="button" value="LIMPAR" class="campos">
+          <input type="reset" value="LIMPAR" class="focus btn">
         </div>
-      </div>
+      </form>
     </section>
-    <section class="container card" id="list-cards">
+    <section class="container cards-section" id="list-cards">
       <!--os cards do pokemon irão aparecer aqui dentro-->
     </section>
+  </section>
   </main>
   <footer class="footer ">
-    <section class="copy container">
-      <p>Copyright Marjorie & Jucielly</p>
-      <section class="links-externos">
-        <a href="https://www.pokemon.com/br/"> <i class="fab fa-chrome"></i> </a>
-        <a href="https://www.pokemongo.com/pt-pt/"> <i class="far fa-arrow-alt-circle-down"></i> </a>
-        <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q"> <i class="fab fa-youtube"></i> </a>
-      </section>
+    <section class="container">
+      <p class="copy">Copyright Marjorie & Jucielly</p>
+      <div class="external-links">
+        <a href="https://www.pokemon.com/br/"> <i class="fab fa-chrome icon"></i> </a>
+        <a href="https://www.pokemongo.com/pt-pt/"> <i class="far fa-arrow-alt-circle-down icon"></i> </a>
+        <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q"> <i class="fab fa-youtube icon"></i> </a>
+      </div>
     </section>
   </footer>
   <script src="main.js" type="module"></script>

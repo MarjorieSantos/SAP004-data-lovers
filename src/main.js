@@ -8,14 +8,11 @@ function render(arrayPokemon) {
   listCards.innerHTML = ""
   arrayPokemon.forEach(function (pokemon) {
     listCards.innerHTML += `
-        <div class="cards">
+        <div class="card">
+        <h2>${pokemon.name}</h2>
             <img src="${pokemon.img}" alt="Bulbasaur">
-            <ul>
-              <li>Nome: ${pokemon.name}</li>
-              <li>Nº: ${pokemon.num}</li>
-              <li>Tipo: ${pokemon.type}</li>
-              <li>Poder: </li>
-            </ul>
+              <span>${pokemon.num}</span>
+              <span>${pokemon.type}</span>
           </div>
         `
   })

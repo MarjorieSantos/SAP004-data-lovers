@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    letter-spacing: 0.5px;
+    background: #DEF5FE;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background: #1C2B59;
+}
+
+.header .menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.header .menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+
+.header .menu-nav ul{
+    padding: 0;
+    list-style: none;
+}
+
+.header .menu-nav ul li{
+    display: inline-block;
+}
+
+/*  main  */
+
+.main .filter-section {
+    padding: 15px;
+}
+
+.main .filter-bar {
+    background: #048ABF;
+}
+
+.main .filter-bar label{
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+.main .filter-bar input,select{
+    border: 1px solid white;
+    border-radius: 50px;
+    background: #FCFCFC;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+}
+
+.focus:focus {
+    outline: none;
+}
+
+.btn:hover{
+    background-color: rgb(255, 255, 255, .3);	   
+  transition:color .5s ease;	   
+  cursor: pointer;
+}
+
+.pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 130px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: rgb(248,248,255);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards-section .card h2{
+    display: inline;
+    font-size: 15px;
+}
+
+.cards-section .card img{
+    width: 100%;
+}
+
+.cards-section .card span{
+    font-size: 12px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #1C2B59;
+    bottom: 0;
+    padding: 16px;
+}
+
+.footer .external-links{
+    display: inline;
+}
+  
+.icon {
+    color: white;
+    padding: 0 16px;
+    align-self: end;
+    text-align: end;
+    font-size: 25px;
+}
+  
+.icon:hover {
+    color: rgb(255, 255, 255, .3);
+    transition: color .3s ease;
+}
+  
+.copy {
+    color: white;
+    flex-grow: 1;
+}
+
+
