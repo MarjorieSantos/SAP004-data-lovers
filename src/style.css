@@ -1,101 +1,78 @@
-/* @font-face {
-    font-family: "pokemon";
-    src: url(fontes/Pokemon\ Hollow.ttf);
-}
-  
-@font-face {
-    font-family: "pokemonBold";
-    src: url(fontes/Pokemon\ Solid.ttf);
-} */
-
 *{
     box-sizing: border-box;
 }
 
 body{
-    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: #333;
     letter-spacing: 0.5px;
     background: #DEF5FE;
-    display: flex;
-    flex-flow: column;
 }
 
 .container {
     width: 100%;
-    max-width: 980px;
-	margin: 0 auto;
-	padding: 0px;
-    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
-/*Header*/
 .header {
     background: #1C2B59;
 }
 
-.header .menu-nav{
+.header .menu-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding-top: 15px;
 }
 
-.header .menu-nav a{
+.header .menu-nav a {
     text-decoration: none;
-    margin: 30px 0;
-}
-
-.header .menu{
-    margin-right: 20px;
-}
-
-.header .menu ul li{
-    display: inline;
-    list-style: none;
-}
-
-.header .menu ul li a{
     font-size: 20px;
-    text-decoration: none;
     color: white;
     text-transform: uppercase;
     padding-left: 5px;
 }
 
-/*main*/
-.main {
-    flex-grow: 1;
+.header .menu ul{
+    padding: 0;
+    list-style: none;
 }
 
-/* filtrar */
+.header .menu ul li{
+    display: inline-block;
+}
+
+/*  main  */
+
 .main .filter-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     padding: 15px;
 }
 
-.main .filter-bar{
+.main .filter-bar {
     background: #048ABF;
 }
 
-label{
-    font-size: 18px;
+.main .filter-bar label{
+    font-size: 12px;
     color: white;
+    text-align: center;
 }
 
-input, select{
-    border: 1.5px solid white;
+.main .filter-bar input,select{
+    border: 1px solid white;
     border-radius: 50px;
     background: #FCFCFC;
-    padding: 8px;
+    padding: 5px;
     font-weight: bold;
     text-align: center;
-    margin-right: 10px;
     color: #333;
+    font-size: 12px;
 }
 
 .focus:focus {
@@ -108,43 +85,67 @@ input, select{
   cursor: pointer;
 }
 
-
-option{
-    color: black;
+.pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
 }
 
-/* footer */
+.cards-section {
+    display: flex;
+}
+
+.card{
+    width: 130px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: rgb(248,248,255);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards-section .card h2{
+    display: inline;
+    font-size: 15px;
+}
+
+.cards-section .card img{
+    width: 100%;
+}
+
+.cards-section .card span{
+    font-size: 12px;
+}
+
 .footer {
     width: 100%;
     background-color: #1C2B59;
     bottom: 0;
     padding: 16px;
-  }
-  
-  .footer .container {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-  }
-  
-  .external-links {
+}
+
+.footer .external-links{
     display: inline;
-  }
+}
   
-  .icon {
+.icon {
     color: white;
     padding: 0 16px;
     align-self: end;
     text-align: end;
     font-size: 25px;
-  }
+}
   
-  .icon:hover {
+.icon:hover {
     color: rgb(255, 255, 255, .3);
     transition: color .3s ease;
-  }
+}
   
-  .copy {
+.copy {
     color: white;
     flex-grow: 1;
-  }
+}
+
+
