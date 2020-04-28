@@ -91,7 +91,7 @@ const openPopup = (pokemon) => {
   height.textContent = `Altura: ${pokemon.height}`
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
-  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution.map(evolution => evolution.name).join(", ")}`
+  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", "): "não há"}`
   popUp.style.visibility = "visible"
   overlay.style.display = "block"
   popUp.style.opacity = "1"
