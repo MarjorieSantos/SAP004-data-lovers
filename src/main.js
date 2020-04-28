@@ -1,5 +1,6 @@
 import {
-    filterByName, sortData
+  filterByName,
+  sortData
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -16,36 +17,36 @@ const overlay = document.querySelector(".overlay")
 
 
 const renderPokemon = (pokemon) => {
-    const template = document.getElementById("pokemon-template")
-    const card = template.content.querySelector(".card")
-    const pokemonName = card.querySelector(".name")
-    const pokemonImage = card.querySelector(".img")
-    const pokemonNumber = card.querySelector(".num")
-    const pokemonType = card.querySelector(".type")
-    pokemonName.textContent = pokemon.name
-    pokemonImage.setAttribute("src", pokemon.img)
-    pokemonNumber.textContent = pokemon.num
-    pokemonType.textContent = pokemon.type
-    const templateDoned = document.importNode(template.content, true)
-    templateDoned.firstElementChild.addEventListener('click',() => openPopup(pokemon))
-    pokemonList.appendChild(templateDoned)
+  const template = document.getElementById("pokemon-template")
+  const card = template.content.querySelector(".card")
+  const pokemonName = card.querySelector(".name")
+  const pokemonImage = card.querySelector(".img")
+  const pokemonNumber = card.querySelector(".num")
+  const pokemonType = card.querySelector(".type")
+  pokemonName.textContent = pokemon.name
+  pokemonImage.setAttribute("src", pokemon.img)
+  pokemonNumber.textContent = pokemon.num
+  pokemonType.textContent = pokemon.type
+  const templateDoned = document.importNode(template.content, true)
+  templateDoned.firstElementChild.addEventListener('click', () => openPopup(pokemon))
+  pokemonList.appendChild(templateDoned)
 }
 
 const clearPokemonList = () => {
-    pokemonList.innerHTML = ""
+  pokemonList.innerHTML = ""
 }
 
 const searchByName = () => {
-    const searchTerm = searchInput.value
-    const result = filterByName(pokemons, searchTerm)
-    clearPokemonList()
-    noResultFound.style.display = result.length < 1 ? "block" : "none"
-    result.forEach(renderPokemon)
+  const searchTerm = searchInput.value
+  const result = filterByName(pokemons, searchTerm)
+  clearPokemonList()
+  noResultFound.style.display = result.length < 1 ? "block" : "none"
+  result.forEach(renderPokemon)
 }
 
 const renderAllPokemons = () => {
-    clearPokemonList()
-    pokemons.forEach(renderPokemon)
+  clearPokemonList()
+  pokemons.forEach(renderPokemon)
 }
 renderAllPokemons()
 
@@ -58,47 +59,47 @@ clearBtn.addEventListener("click", renderAllPokemons)
 const filter = document.querySelector("#filter-for");
 
 filter.addEventListener("change", function (event) {
-    if (filter.value == "A-Z") {
-        const arrayOrder = sortData(pokemons, "name", "A-Z")
-        renderAllPokemons(arrayOrder)
-    } else if (filter.value == "Z-A") {
-        const arrayOrder = sortData(pokemons, "name", "Z-A")
-        renderAllPokemons(arrayOrder)
-    } else if (filter.value == "crescentOrder") {
-        const arrayOrder = sortData(pokemons, "num", "crescentOrder")
-        renderAllPokemons(arrayOrder)
-    } else if (filter.value == "decreasingOrder") {
-        const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
-        renderAllPokemons(arrayOrder)
-    }
+  if (filter.value == "A-Z") {
+    const arrayOrder = sortData(pokemons, "name", "A-Z")
+    renderAllPokemons(arrayOrder)
+  } else if (filter.value == "Z-A") {
+    const arrayOrder = sortData(pokemons, "name", "Z-A")
+    renderAllPokemons(arrayOrder)
+  } else if (filter.value == "crescentOrder") {
+    const arrayOrder = sortData(pokemons, "num", "crescentOrder")
+    renderAllPokemons(arrayOrder)
+  } else if (filter.value == "decreasingOrder") {
+    const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
+    renderAllPokemons(arrayOrder)
+  }
 })
 
 const openPopup = (pokemon) => {
-    const name = popUp.querySelector(".name")
-    const img = popUp.querySelector(".img")
-    const num = popUp.querySelector(".num")
-    const type = popUp.querySelector(".type")
-    const height = popUp.querySelector(".height")
-    const weight = popUp.querySelector(".weight")
-    const candy = popUp.querySelector(".candy")
-    const nextEvolution = popUp.querySelector(".next_evolution")
-   
-    name.textContent = pokemon.name
-    img.setAttribute("src",pokemon.img)
-    num.textContent = pokemon.num
-    type.textContent = `Pokémon tipo: ${pokemon.type}`
-    height.textContent = `Altura: ${pokemon.height}`
-    weight.textContent = `Peso: ${pokemon.weight}`
-    candy.textContent = `Candy: ${pokemon.candy}`
-    nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution}`
-     popUp.style.display = "block"
-     overlay.style.display = "block"
-   }
+  const name = popUp.querySelector(".name")
+  const img = popUp.querySelector(".img")
+  const num = popUp.querySelector(".num")
+  const type = popUp.querySelector(".type")
+  const height = popUp.querySelector(".height")
+  const weight = popUp.querySelector(".weight")
+  const candy = popUp.querySelector(".candy")
+  const nextEvolution = popUp.querySelector(".next_evolution")
 
-   const closePopup = () =>{
-    popUp.style.display = "none"
-    overlay.style.display = "none"
-   }
-   
-   closeBtn.addEventListener("click",closePopup)
-   overlay.addEventListener("click",closePopup)
+  name.textContent = pokemon.name
+  img.setAttribute("src", pokemon.img)
+  num.textContent = pokemon.num
+  type.textContent = `Pokémon tipo: ${pokemon.type}`
+  height.textContent = `Altura: ${pokemon.height}`
+  weight.textContent = `Peso: ${pokemon.weight}`
+  candy.textContent = `Candy: ${pokemon.candy}`
+  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution}`
+  popUp.style.display = "block"
+  overlay.style.display = "block"
+}
+
+const closePopup = () => {
+  popUp.style.display = "none"
+  overlay.style.display = "none"
+}
+
+closeBtn.addEventListener("click", closePopup)
+overlay.addEventListener("click", closePopup)

@@ -176,8 +176,10 @@ body{
     transition: .3s;
     display: none;
     z-index: 200;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   }
-  
+
+
   .overlay {
     opacity: 0.5;
     position: fixed;
@@ -188,4 +190,17 @@ body{
     z-index: 100;
     background-color: #333;
     display: none;
+  }
+
+  .btn-close {
+      color: #D94A4A;
+      border: none;
+      background-color: white;
+     font-size: 150%;
+     margin: 5px;
+  }
+
+  .btn-close:hover {
+      color: #ac3434;
+      cursor: pointer;
   }
