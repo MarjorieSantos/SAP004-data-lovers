@@ -10,6 +10,9 @@ const searchInput = document.getElementById("search-input")
 const pokemonList = document.getElementById("pokemon-list")
 const clearBtn = document.getElementById("clear-btn")
 const noResultFound = document.getElementById("no-results-found")
+const popUp = document.getElementById("pop-up-div")
+const closeBtn = document.getElementById("close")
+const overlay = document.querySelector(".overlay")
 
 
 const renderPokemon = (pokemon) => {
@@ -68,3 +71,33 @@ filter.addEventListener("change", function (event) {
         renderAllPokemons(arrayOrder)
     }
 })
+
+const openPopup = (pokemon) => {
+    const name = popUp.querySelector(".name")
+    const img = popUp.querySelector(".img")
+    const num = popUp.querySelector(".num")
+    const type = popUp.querySelector(".type")
+    const height = popUp.querySelector(".height")
+    const weight = popUp.querySelector(".weight")
+    const candy = popUp.querySelector(".candy")
+    const nextEvolution = popUp.querySelector(".next_evolution")
+   
+    name.textContent = pokemon.name
+    img.setAttribute("src",pokemon.img)
+    num.textContent = pokemon.num
+    type.textContent = `Pokémon tipo: ${pokemon.type}`
+    height.textContent = `Altura: ${pokemon.height}`
+    weight.textContent = `Peso: ${pokemon.weight}`
+    candy.textContent = `Candy: ${pokemon.candy}`
+    nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution}`
+     popUp.style.display = "block"
+     overlay.style.display = "block"
+   }
+
+   const closePopup = () =>{
+    popUp.style.display = "none"
+    overlay.style.display = "none"
+   }
+   
+   closeBtn.addEventListener("click",closePopup)
+   overlay.addEventListener("click",closePopup)
