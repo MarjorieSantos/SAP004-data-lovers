@@ -9,7 +9,7 @@ const pokemons = data.pokemon
 const searchInput = document.getElementById("search-input")
 const pokemonList = document.getElementById("pokemon-list")
 const clearBtn = document.getElementById("clear-btn")
-const noResultFound = document.getElementById("no-results-found")
+const noResultFound = document.getElementById("no-result-found")
 
 
 const renderPokemon = (pokemon) => {
@@ -35,7 +35,6 @@ const searchByName = () => {
     const searchTerm = searchInput.value
     const result = filterByName(pokemons, searchTerm)
     clearPokemonList()
-    noResultFound.style.display = result.length < 1 ? "block" : "none"
     result.forEach(renderPokemon)
 }
 
