@@ -8,7 +8,7 @@ body{
     font-family: 'Roboto', sans-serif;
     color: #333;
     letter-spacing: 0.5px;
-    background: #DEF5FE;
+    background:  #DEF5FE;
 }
 
 .container {
@@ -17,6 +17,7 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -50,12 +51,8 @@ body{
 
 /*  main  */
 
-.main .filter-section {
-    padding: 15px;
-}
-
 .main .filter-bar {
-    background: #048ABF;
+    background: linear-gradient(to right,#47bae7, #7de096);
 }
 
 .main .filter-bar label{
@@ -73,6 +70,14 @@ body{
     text-align: center;
     color: #333;
     font-size: 12px;
+}
+
+.main .filter-section {
+    padding: 15px;
+}
+
+.main .filter-section div{
+    margin: 0 5px;
 }
 
 .focus:focus {
@@ -98,7 +103,7 @@ body{
 
 .card{
     width: 130px;
-    border: 1px solid red;
+    border: 1px solid transparent;
     border-radius: 10px;
     background: rgb(248,248,255);
     padding: 15px;
@@ -147,5 +152,4 @@ body{
     color: white;
     flex-grow: 1;
 }
-
 
