@@ -27,6 +27,7 @@ const renderPokemon = (pokemon) => {
     pokemonNumber.textContent = pokemon.num
     pokemonType.textContent = pokemon.type
     const templateDoned = document.importNode(template.content, true)
+    templateDoned.firstElementChild.addEventListener('click',() => openPopup(pokemon))
     pokemonList.appendChild(templateDoned)
 }
 
