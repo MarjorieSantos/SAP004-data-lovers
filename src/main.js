@@ -91,13 +91,15 @@ const openPopup = (pokemon) => {
   height.textContent = `Altura: ${pokemon.height}`
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
-  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution}`
-  popUp.style.display = "block"
+  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution.map(evolution => evolution.name).join(", ")}`
+  popUp.style.visibility = "visible"
   overlay.style.display = "block"
+  popUp.style.opacity = "1"
 }
 
 const closePopup = () => {
-  popUp.style.display = "none"
+  popUp.style.visibility = "hidden"
+  popUp.style.opacity = "0"
   overlay.style.display = "none"
 }
 
