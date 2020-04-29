@@ -6,12 +6,12 @@ import {
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
-
 const searchInput = document.getElementById("search-input")
 const pokemonList = document.getElementById("pokemon-list")
 const clearBtn = document.getElementById("clear-btn")
 const noResultFound = document.getElementById("no-results-found")
 const popUp = document.getElementById("pop-up-div")
+const filter = document.querySelector("#filter-for");
 const closeBtn = document.getElementById("close")
 const overlay = document.querySelector(".overlay")
 
@@ -50,15 +50,11 @@ const renderAllPokemons = () => {
 }
 renderAllPokemons()
 
-
-
 searchInput.addEventListener("keyup", searchByName)
 clearBtn.addEventListener("click", renderAllPokemons)
 
 
-const filter = document.querySelector("#filter-for");
-
-filter.addEventListener("change", function (event) {
+const filterFor = () => {
   if (filter.value == "A-Z") {
     const arrayOrder = sortData(pokemons, "name", "A-Z")
     renderAllPokemons(arrayOrder)
@@ -72,7 +68,10 @@ filter.addEventListener("change", function (event) {
     const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
     renderAllPokemons(arrayOrder)
   }
-})
+}
+
+filter.addEventListener("change", filterFor)
+
 
 const openPopup = (pokemon) => {
   const name = popUp.querySelector(".name")
