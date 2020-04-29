@@ -62,8 +62,7 @@ body {
   text-align: center;
 }
 
-.main .filter-bar input,
-select {
+.main .filter-bar input,select {
   border: 1px solid white;
   border-radius: 50px;
   background: #FCFCFC;
@@ -168,7 +167,6 @@ select {
   cursor: pointer;
 }
 
-
 .pop-up {
   position: fixed;
   top: 0;
@@ -176,8 +174,8 @@ select {
   left: 0;
   right: 0;
   margin: auto;
-  width: 40%;
-  height: 500px;
+  width: 290px;
+  height: 400px;
   background-color: white;
   border-radius: 10px;
   display: none;
@@ -187,7 +185,6 @@ select {
   transition: .5s;
   opacity: 1;
 }
-
 
 .overlay {
   opacity: 0.5;
@@ -276,6 +273,10 @@ select {
     }
     .cards-section .card span{
         font-size: 15px;
+    }
+    .pop-up{
+      width: 300px;
+      height: 400px;
     }
     .footer{
         padding: 16px;
