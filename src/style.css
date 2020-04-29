@@ -75,10 +75,16 @@ body{
 
 .main .filter-section {
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main .filter-section div{
     margin: 0 5px;
+}
+
+.main .filter-section .btn{
+    margin-top: 15px;
 }
 
 .focus:focus {
@@ -109,7 +115,7 @@ body{
     background: rgb(248,248,255);
     padding: 15px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 10px;
     transition: 0.3s;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
@@ -131,7 +137,7 @@ body{
     width: 100%;
     background-color: #1C2B59;
     bottom: 0;
-    padding: 16px;
+    padding: 50px;
 }
 
 .footer .external-links{
@@ -161,3 +167,56 @@ body{
     cursor: pointer;
 }
 
+@media only screen and (min-width: 560px){
+    .main .filter-bar label{
+        font-size: 15px;
+    }
+    .cards-section .card{
+        width: 140px;
+        padding: 20px;
+    }
+    .main .filter-section .btn{
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .header .menu-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    .main .filter-bar label{
+        font-size: 15px;
+    }
+    .cards-section .card{
+        width: 150px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .header .menu-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main .filter-bar label{
+        font-size: 20px;
+    }
+    .main .filter-bar input,select{
+        padding: 8px;
+        font-size: 12px;
+    }
+    .cards-section .card{
+        width: 160px;
+        padding: 25px;
+    }
+    .cards-section .card span{
+        font-size: 15px;
+    }
+    .footer{
+        padding: 16px;
+    }
+}
