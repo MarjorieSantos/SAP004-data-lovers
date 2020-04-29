@@ -218,3 +218,7 @@ select {
   cursor: pointer;
 }
 
+.pop-up span {
+    margin-bottom: 10px;
+}
+
