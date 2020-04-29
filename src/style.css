@@ -62,8 +62,7 @@ body {
   text-align: center;
 }
 
-.main .filter-bar input,
-select {
+.main .filter-bar input,select {
   border: 1px solid white;
   border-radius: 50px;
   background: #FCFCFC;
@@ -75,11 +74,17 @@ select {
 }
 
 .main .filter-section {
-  padding: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main .filter-section div {
   margin: 0 5px;
+}
+
+.main .filter-section .btn{
+    margin-top: 15px;
 }
 
 .focus:focus {
@@ -103,16 +108,16 @@ select {
   display: flex;
 }
 
-.card {
-  width: 130px;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background: rgb(248, 248, 255);
-  padding: 15px;
-  text-align: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+.card{
+    width: 130px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: rgb(248,248,255);
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .cards-section .card h2 {
@@ -129,10 +134,10 @@ select {
 }
 
 .footer {
-  width: 100%;
-  background-color: #1C2B59;
-  bottom: 0;
-  padding: 16px;
+    width: 100%;
+    background-color: #1C2B59;
+    bottom: 0;
+    padding: 50px;
 }
 
 .footer .external-links {
@@ -162,7 +167,6 @@ select {
   cursor: pointer;
 }
 
-
 .pop-up {
   position: fixed;
   top: 0;
@@ -170,8 +174,8 @@ select {
   left: 0;
   right: 0;
   margin: auto;
-  width: 40%;
-  height: 500px;
+  width: 290px;
+  height: 400px;
   background-color: white;
   border-radius: 10px;
   display: none;
@@ -181,7 +185,6 @@ select {
   transition: .5s;
   opacity: 1;
 }
-
 
 .overlay {
   opacity: 0.5;
@@ -222,3 +225,60 @@ select {
     margin-bottom: 10px;
 }
 
+@media only screen and (min-width: 560px){
+    .main .filter-bar label{
+        font-size: 15px;
+    }
+    .cards-section .card{
+        width: 140px;
+        padding: 20px;
+    }
+    .main .filter-section .btn{
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .header .menu-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    .main .filter-bar label{
+        font-size: 15px;
+    }
+    .cards-section .card{
+        width: 150px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .header .menu-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main .filter-bar label{
+        font-size: 20px;
+    }
+    .main .filter-bar input,select{
+        padding: 8px;
+        font-size: 12px;
+    }
+    .cards-section .card{
+        width: 160px;
+        padding: 25px;
+    }
+    .cards-section .card span{
+        font-size: 15px;
+    }
+    .pop-up{
+      width: 300px;
+      height: 400px;
+    }
+    .footer{
+        padding: 16px;
+    }
+}
