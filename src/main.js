@@ -26,7 +26,7 @@ const renderPokemon = (pokemon) => {
   pokemonName.textContent = pokemon.name
   pokemonImage.setAttribute("src", pokemon.img)
   pokemonNumber.textContent = pokemon.num
-  pokemonType.textContent = pokemon.type
+  pokemonType.textContent = pokemon.type.toString().replace(",", ", ")
   const templateDoned = document.importNode(template.content, true)
   templateDoned.firstElementChild.addEventListener('click', () => openPopup(pokemon))
   pokemonList.appendChild(templateDoned)
@@ -55,16 +55,16 @@ clearBtn.addEventListener("click", renderAllPokemons)
 
 
 const filterFor = () => {
-  if (filter.value == "A-Z") {
+  if (filter.value === "A-Z") {
     const arrayOrder = sortData(pokemons, "name", "A-Z")
     renderAllPokemons(arrayOrder)
-  } else if (filter.value == "Z-A") {
+  } else if (filter.value === "Z-A") {
     const arrayOrder = sortData(pokemons, "name", "Z-A")
     renderAllPokemons(arrayOrder)
-  } else if (filter.value == "crescentOrder") {
+  } else if (filter.value === "crescentOrder") {
     const arrayOrder = sortData(pokemons, "num", "crescentOrder")
     renderAllPokemons(arrayOrder)
-  } else if (filter.value == "decreasingOrder") {
+  } else if (filter.value === "decreasingOrder") {
     const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
     renderAllPokemons(arrayOrder)
   }
@@ -86,7 +86,7 @@ const openPopup = (pokemon) => {
   name.textContent = pokemon.name
   img.setAttribute("src", pokemon.img)
   num.textContent = pokemon.num
-  type.textContent = `Pokémon tipo: ${pokemon.type}`
+  type.textContent = `Pokémon tipo: ${pokemon.type.toString().replace(",", ", ")}`
   height.textContent = `Altura: ${pokemon.height}`
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
