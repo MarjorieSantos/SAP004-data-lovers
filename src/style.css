@@ -52,6 +52,10 @@ body {
 
 /*  main  */
 
+.main {
+  min-height: 70vh;
+}
+
 .main .filter-bar {
   background: linear-gradient(to right, #47bae7, #7de096);
 }
@@ -137,6 +141,7 @@ body {
     width: 100%;
     background-color: #1C2B59;
     bottom: 0;
+    position: relative;
     padding: 50px;
 }
 
@@ -225,6 +230,42 @@ body {
     margin-bottom: 10px;
 }
 
+.next_evolution {
+  text-align: center;
+}
+
+/*  PÁGINA SOBRE  */
+.main .about-page .text-about{
+  margin: 30px 30px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .about-page .text-about h1, h2{
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main .about-page .text-about h1::after, h2::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f2be22;
+  margin: 8px auto;
+}
+
+.main .about-page .img{
+  width: 75px;
+  margin: 0 auto;
+}
+
+.main .about-page .thank p{
+  text-align: center;
+}
+
 @media only screen and (min-width: 560px){
     .main .filter-bar label{
         font-size: 15px;
@@ -252,6 +293,21 @@ body {
         width: 150px;
         padding: 20px;
     }
+    .main .about-page .text-about{
+      flex-direction: row;
+    }
+    .main .about-page .text-about .column{
+      display: block;
+      width: 300px;
+    }
+    .main .about-page .text-about .left{
+      text-align: end;
+      margin-right: 30px;
+    }
+    .main .about-page .text-about .right{
+      text-align: start;
+      margin-left: 30px;
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -259,6 +315,9 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .main {
+      min-height: 90vh;
     }
     .main .filter-bar label{
         font-size: 20px;
@@ -279,11 +338,15 @@ body {
       height: 400px;
     }
     .footer{
-        padding: 16px;
+      padding: 16px;
+    }
+    .main .about-page p{
+      font-size: 20px;
+    }
+    .main .about-page .text-about .column{
+      display: block;
+      width: 400px;
     }
 }
 
 
-.next_evolution {
-  text-align: center;
-}

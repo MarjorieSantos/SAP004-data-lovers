@@ -1,5 +1,5 @@
 export const filterByName = (pokemons, searchedName) => {
-  if (Array.isArray(pokemons) === false || typeof searchedName !== "string") {
+  if (!Array.isArray(pokemons) || typeof searchedName !== "string") {
     throw new TypeError()
   }
   return pokemons.filter((pokemon) => {
