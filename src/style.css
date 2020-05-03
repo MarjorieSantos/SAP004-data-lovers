@@ -66,7 +66,8 @@ body {
   text-align: center;
 }
 
-.main .filter-bar input,select {
+.main .filter-bar input,
+select {
   border: 1px solid white;
   border-radius: 50px;
   background: #FCFCFC;
@@ -78,17 +79,17 @@ body {
 }
 
 .main .filter-section {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main .filter-section div {
   margin: 0 5px;
 }
 
-.main .filter-section .btn{
-    margin-top: 15px;
+.main .filter-section .btn {
+  margin-top: 15px;
 }
 
 .focus:focus {
@@ -112,18 +113,18 @@ body {
   display: flex;
 }
 
-.card{
-    width: 130px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background: rgb(248,248,255);
-    padding: 15px;
-    text-align: center;
-    margin: 20px 10px;
-    transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    display: flex;
-   flex-direction: column;
+.card {
+  width: 130px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: rgb(248, 248, 255);
+  padding: 15px;
+  text-align: center;
+  margin: 20px 10px;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: column;
 }
 
 .cards-section .card h2 {
@@ -140,11 +141,11 @@ body {
 }
 
 .footer {
-    width: 100%;
-    background-color: #1C2B59;
-    bottom: 0;
-    position: relative;
-    padding: 50px;
+  width: 100%;
+  background-color: #1C2B59;
+  bottom: 0;
+  position: relative;
+  padding: 50px;
 }
 
 .footer .external-links {
@@ -162,6 +163,16 @@ body {
 .icon:hover {
   color: rgb(255, 255, 255, .3);
   transition: color .3s ease;
+}
+
+.hover-menu a:hover {
+  color: #CCCCCC;
+  text-decoration: underline;
+}
+
+.hover-menu a {
+  transition: color .3s ease;
+
 }
 
 .copy {
@@ -229,34 +240,36 @@ body {
 }
 
 .pop-up span {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .next_evolution {
   text-align: center;
 }
 
-.name{
+.name {
   font-weight: bolder;
   font-size: 150%;
   color: black
 }
 
 /*  PÁGINA SOBRE  */
-.main .about-page .text-about{
+.main .about-page .text-about {
   margin: 30px 30px;
   text-align: justify;
   display: flex;
   flex-direction: column;
 }
 
-.main .about-page .text-about h1, h2{
+.main .about-page .text-about h1,
+h2 {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.main .about-page .text-about h1::after, h2::after{
+.main .about-page .text-about h1::after,
+h2::after {
   content: "";
   display: block;
   width: 60px;
@@ -265,96 +278,112 @@ body {
   margin: 8px auto;
 }
 
-.main .about-page .img{
+.main .about-page .img {
   width: 75px;
   margin: 0 auto;
 }
 
-.main .about-page .thank p{
+.main .about-page .thank p {
   text-align: center;
 }
 
-@media only screen and (min-width: 560px){
-    .main .filter-bar label{
-        font-size: 15px;
-    }
-    .cards-section .card{
-        width: 140px;
-        padding: 20px;
-    }
-    .main .filter-section .btn{
-        margin: 0;
-    }
+@media only screen and (min-width: 560px) {
+  .main .filter-bar label {
+    font-size: 15px;
+  }
+
+  .cards-section .card {
+    width: 140px;
+    padding: 20px;
+  }
+
+  .main .filter-section .btn {
+    margin: 0;
+  }
 }
 
-@media only screen and (min-width:768px){
-    .header .menu-nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 30px;
-    }
-    .main .filter-bar label{
-        font-size: 15px;
-    }
-    .cards-section .card{
-        width: 150px;
-        padding: 20px;
-    }
-    .main .about-page .text-about{
-      flex-direction: row;
-    }
-    .main .about-page .text-about .column{
-      display: block;
-      width: 300px;
-    }
-    .main .about-page .text-about .left{
-      text-align: end;
-      margin-right: 30px;
-    }
-    .main .about-page .text-about .right{
-      text-align: start;
-      margin-left: 30px;
-    }
+@media only screen and (min-width:768px) {
+  .header .menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .main .filter-bar label {
+    font-size: 15px;
+  }
+
+  .cards-section .card {
+    width: 150px;
+    padding: 20px;
+  }
+
+  .main .about-page .text-about {
+    flex-direction: row;
+  }
+
+  .main .about-page .text-about .column {
+    display: block;
+    width: 300px;
+  }
+
+  .main .about-page .text-about .left {
+    text-align: end;
+    margin-right: 30px;
+  }
+
+  .main .about-page .text-about .right {
+    text-align: start;
+    margin-left: 30px;
+  }
 }
 
-@media only screen and (min-width: 1200px){
-    .header .menu-nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .main {
-      min-height: 90vh;
-    }
-    .main .filter-bar label{
-        font-size: 20px;
-    }
-    .main .filter-bar input,select{
-        padding: 8px;
-        font-size: 12px;
-    }
-    .cards-section .card{
-        width: 160px;
-        padding: 25px;
-    }
-    .cards-section .card span{
-        font-size: 15px;
-    }
-    .pop-up{
-      width: 300px;
-      height: 400px;
-    }
-    .footer{
-      padding: 16px;
-    }
-    .main .about-page p{
-      font-size: 20px;
-    }
-    .main .about-page .text-about .column{
-      display: block;
-      width: 400px;
-    }
+@media only screen and (min-width: 1200px) {
+  .header .menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main {
+    min-height: 90vh;
+  }
+
+  .main .filter-bar label {
+    font-size: 20px;
+  }
+
+  .main .filter-bar input,
+  select {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .cards-section .card {
+    width: 160px;
+    padding: 25px;
+  }
+
+  .cards-section .card span {
+    font-size: 15px;
+  }
+
+  .pop-up {
+    width: 300px;
+    height: 400px;
+  }
+
+  .footer {
+    padding: 16px;
+  }
+
+  .main .about-page p {
+    font-size: 20px;
+  }
+
+  .main .about-page .text-about .column {
+    display: block;
+    width: 400px;
+  }
 }
-
-
