@@ -387,3 +387,12 @@ h2::after {
     width: 400px;
   }
 }
+
+.pikachu-logo {
+  width: 10%;
+  height: 15%;
+}
+.curiosity-title {
+  text-align: center;
+  font-size: 400%;
+}
