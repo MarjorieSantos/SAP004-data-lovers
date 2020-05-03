@@ -50,8 +50,12 @@ const renderAllPokemons = () => {
 }
 renderAllPokemons()
 
+const resetOrder = () =>{ filter.value = "crescentOrder"
+filterFor()
+}
+
 searchInput.addEventListener("keyup", searchByName)
-clearBtn.addEventListener("click", renderAllPokemons)
+clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
@@ -86,7 +90,7 @@ const openPopup = (pokemon) => {
   name.textContent = pokemon.name
   img.setAttribute("src", pokemon.img)
   num.textContent = pokemon.num
-  type.textContent = `Pokémon tipo: ${pokemon.type.toString().replace(",", ", ")}`
+  type.textContent = `Pokémon tipo: ${pokemon.type.join(", ")}`
   height.textContent = `Altura: ${pokemon.height}`
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
