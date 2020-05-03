@@ -253,12 +253,14 @@ select {
   color: black
 }
 
+
 /*  PÁGINA SOBRE  */
 .main .about-page .text-about {
   margin: 30px 30px;
   text-align: justify;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .main .about-page .text-about h1,
@@ -269,7 +271,8 @@ h2 {
 }
 
 .main .about-page .text-about h1::after,
-h2::after {
+.main .about-page .text-about h2::after,
+.main .text-about h2::after {
   content: "";
   display: block;
   width: 60px;
@@ -287,6 +290,23 @@ h2::after {
   text-align: center;
 }
 
+.pikachu-logo {
+  width: 10%;
+}
+
+.pikachu-logo-container {
+  text-align: center;
+}
+
+.curiosity-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.about-page{
+  padding: 10px;
+}
+
 @media only screen and (min-width: 560px) {
   .main .filter-bar label {
     font-size: 15px;
@@ -300,6 +320,12 @@ h2::after {
   .main .filter-section .btn {
     margin: 0;
   }
+
+  .curiosity-title {
+    text-align: center;
+    font-size: 40px;
+  }
+ 
 }
 
 @media only screen and (min-width:768px) {
@@ -337,6 +363,12 @@ h2::after {
     text-align: start;
     margin-left: 30px;
   }
+
+  .curiosity-title {
+    text-align: center;
+    font-size: 80px;
+  }
+  
 }
 
 @media only screen and (min-width: 1200px) {
@@ -386,13 +418,11 @@ h2::after {
     display: block;
     width: 400px;
   }
+
+  .curiosity-title {
+    text-align: center;
+    font-size: 4em;
+  }
+  
 }
 
-.pikachu-logo {
-  width: 10%;
-  height: 15%;
-}
-.curiosity-title {
-  text-align: center;
-  font-size: 400%;
-}
