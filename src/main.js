@@ -27,9 +27,9 @@ const renderPokemon = (pokemon) => {
   pokemonImage.setAttribute("src", pokemon.img)
   pokemonNumber.textContent = pokemon.num
   pokemonType.textContent = pokemon.type.toString().replace(",", ", ")
-  const clonadeTemplate = document.importNode(template.content, true)
-  clonadeTemplate.firstElementChild.addEventListener('click', () => openPopup(pokemon))
-  pokemonList.appendChild(clonadeTemplate)
+  const clonedTemplate = document.importNode(template.content, true)
+  clonedTemplate.firstElementChild.addEventListener('click', () => openPopup(pokemon))
+  pokemonList.appendChild(clonedTemplate)
 }
 
 const clearPokemonList = () => {
