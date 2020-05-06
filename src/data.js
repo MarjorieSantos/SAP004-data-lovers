@@ -51,3 +51,21 @@ export const sortData = (data, sortBy, sortOrder) => {
   }
   return data
 };
+
+//  export const computeStats = (pokemons) => {
+//   pokemons.reduce((valorAcumulator, newArray) => {
+//     const calcWeight = newArray.pokemon.weight >= 4 ? "bigger" : "smaller";
+//     valorAcumulator[calcWeight].push(newArray);
+//     return valorAcumulator;
+//    }, 0)}
+
+
+
+// export const computeStats = (pokemons) => {
+//   const total = pokemons.reduce((total, newArray) => {
+//     return total += Number(newArray.weight.replace(" kg", ""))
+//   }, 0)
+//   return total/pokemons.length
+// }
+
+

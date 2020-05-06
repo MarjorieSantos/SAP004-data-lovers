@@ -1,6 +1,7 @@
 import {
   filterByName,
-  sortData
+  sortData,
+  computeStats
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -59,19 +60,8 @@ clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
-  if (filter.value === "A-Z") {
-    const arrayOrder = sortData(pokemons, "name", "A-Z")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value === "Z-A") {
-    const arrayOrder = sortData(pokemons, "name", "Z-A")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value === "crescentOrder") {
-    const arrayOrder = sortData(pokemons, "num", "crescentOrder")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value === "decreasingOrder") {
-    const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
-    renderAllPokemons(arrayOrder)
-  }
+  const arrayOrder = sortData(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  renderAllPokemons(arrayOrder)
 }
 
 filter.addEventListener("change", filterFor)
@@ -108,3 +98,5 @@ const closePopup = () => {
 
 closeBtn.addEventListener("click", closePopup)
 overlay.addEventListener("click", closePopup)
+
+// console.log(computeStats(pokemons))
