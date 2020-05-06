@@ -1,6 +1,7 @@
 import {
   filterByName,
-  sortData
+  sortData,
+  computeStats
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -59,19 +60,8 @@ clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
-  if (filter.value === "A-Z") {
-    const arrayOrder = sortData(pokemons, "name", "A-Z")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value === "Z-A") {
-    const arrayOrder = sortData(pokemons, "name", "Z-A")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value === "crescentOrder") {
-    const arrayOrder = sortData(pokemons, "num", "crescentOrder")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value === "decreasingOrder") {
-    const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
-    renderAllPokemons(arrayOrder)
-  }
+  const arrayOrder = sortData(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  renderAllPokemons(arrayOrder)
 }
 
 filter.addEventListener("change", filterFor)
@@ -86,6 +76,7 @@ const openPopup = (pokemon) => {
   const weight = popUp.querySelector(".weight")
   const candy = popUp.querySelector(".candy")
   const nextEvolution = popUp.querySelector(".next_evolution")
+  const weightPercentage = popUp.querySelector(".weightPercentage")
 
   name.textContent = pokemon.name
   img.setAttribute("src", pokemon.img)
@@ -95,6 +86,7 @@ const openPopup = (pokemon) => {
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
   nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", "): "não há"}`
+  weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
   popUp.style.visibility = "visible"
   overlay.style.display = "block"
   popUp.style.opacity = "1"

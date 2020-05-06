@@ -51,3 +51,14 @@ export const sortData = (data, sortBy, sortOrder) => {
   }
   return data
 };
+
+export const computeStats = (pokemons, singleWeightPokemon) => {
+  const calcWeight = pokemons.reduce((accumulator, pokemon) => {
+    if(+singleWeightPokemon.weight.replace(" kg", "") > +pokemon.weight.replace(" kg", "")){
+      return accumulator +1
+    } else {
+      return accumulator
+    }
+  }, 0)
+  return ((calcWeight / pokemons.length) * 100).toFixed(1)
+}
