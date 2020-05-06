@@ -76,6 +76,7 @@ const openPopup = (pokemon) => {
   const weight = popUp.querySelector(".weight")
   const candy = popUp.querySelector(".candy")
   const nextEvolution = popUp.querySelector(".next_evolution")
+  const weightPercentage = popUp.querySelector(".weightPercentage")
 
   name.textContent = pokemon.name
   img.setAttribute("src", pokemon.img)
@@ -85,6 +86,7 @@ const openPopup = (pokemon) => {
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
   nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", "): "não há"}`
+  weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
   popUp.style.visibility = "visible"
   overlay.style.display = "block"
   popUp.style.opacity = "1"
@@ -98,5 +100,3 @@ const closePopup = () => {
 
 closeBtn.addEventListener("click", closePopup)
 overlay.addEventListener("click", closePopup)
-
-// console.log(computeStats(pokemons))
