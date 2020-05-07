@@ -8,6 +8,9 @@ export const filterByName = (pokemons, searchedName) => {
 }
 
 export const sortData = (data, sortBy, sortOrder) => {
+  if (typeof sortOrder !== "string" && typeof data !== "string") {
+    throw new TypeError()
+  }
   if (sortOrder === "A-Z" || sortOrder === "crescentOrder") {
     data.sort(function (a, b) {
       return a[sortBy] > b[sortBy] ? 1 : a[sortBy] < b[sortBy] ? -1 : 0;
@@ -21,9 +24,12 @@ export const sortData = (data, sortBy, sortOrder) => {
 };
 
 export const computeStats = (pokemons, singleWeightPokemon) => {
+  if (!Array.isArray(pokemons) || typeof singleWeightPokemon !== "object") {
+    throw new TypeError()
+  }
   const calcWeight = pokemons.reduce((accumulator, pokemon) => {
-    if(+singleWeightPokemon.weight.replace(" kg", "") > +pokemon.weight.replace(" kg", "")){
-      return accumulator +1
+    if (+singleWeightPokemon.weight.replace(" kg", "") > +pokemon.weight.replace(" kg", "")) {
+      return accumulator + 1
     } else {
       return accumulator
     }
