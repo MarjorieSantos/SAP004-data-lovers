@@ -10,11 +10,13 @@ describe('filterByName', () => {
 
   it('should throw TypeError', () => {
     expect(() => filterByName()).toThrow(TypeError);
+    expect(() => filterByName(0)).toThrow(TypeError);
+    expect(() => filterByName(null, [])).toThrow(TypeError);
   });
 
-  it('should return  an "Array" for "Pikachu"', () => {
-    expect(filterByName(data.pokemon,"Pikachu")).toBe([{"avg_spawns": 21, "candy": "Pikachu Candy", "candy_count": 50, "egg": "2 km", "height": "0.41 m", "id": 25, "img": "http://www.serebii.net/pokemongo/pokemon/025.png", "multipliers": [2.34], "name": "Pikachu", "next_evolution": [{"name": "Raichu", "num": "026"}], "num": "025", "spawn_chance": 0.21, "spawn_time": "04:00", "type": ["Electric"], "weaknesses": ["Ground"], "weight": "6.0 kg"}])
-  });
+  it('should return  an "Pikachu" for "Pikachu"', () => {
+    expect(filterByName(data.pokemon,"pikachu")[0].name).toBe("Pikachu")
+    });
 });
 
 
@@ -25,6 +27,8 @@ describe('sortData', () => {
 
   it('should throw typeError', () => {
     expect(() => sortData()).toThrow(TypeError);
+    expect(() => sortData(0)).toThrow(TypeError);
+    expect(() => sortData(null, [])).toThrow(TypeError);
   });
 
   it('should return "Abra" to "zubat" with sort order "A-Z"', () =>{
@@ -55,6 +59,8 @@ describe('computeStats', () => {
 
   it('should throw typeError', () => {
     expect(() => computeStats()).toThrow(TypeError);
+    expect(() => computeStats(0)).toThrow(TypeError);
+    expect(() => computeStats(null, [])).toThrow(TypeError);
   });
 
   it('should return "16.6" for "6.9 kg',() => {
