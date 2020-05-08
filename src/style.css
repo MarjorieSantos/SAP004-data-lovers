@@ -70,8 +70,7 @@ footer .container{
   text-align: center;
 }
 
-.main .filter-bar input,
-select {
+.main .filter-bar input,select {
   border: 1px solid white;
   border-radius: 50px;
   background: #FCFCFC;
@@ -150,7 +149,6 @@ select {
   bottom: 0;
   position: relative;
   padding: 50px;
-
 }
 
 .footer .external-links {
@@ -177,7 +175,6 @@ select {
 
 .hover-menu a {
   transition: color .3s ease;
-
 }
 
 .copy {
@@ -255,10 +252,9 @@ select {
 
 .name {
   font-weight: bolder;
-  font-size: 150%;
+  font-size: 20px;
   color: black
 }
-
 
 /*  PÁGINA SOBRE  */
 .main .about-page .text-about {
