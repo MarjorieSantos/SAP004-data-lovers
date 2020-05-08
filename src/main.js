@@ -51,8 +51,9 @@ const renderAllPokemons = () => {
 }
 renderAllPokemons()
 
-const resetOrder = () =>{ filter.value = "crescentOrder"
-filterFor()
+const resetOrder = () => {
+filter.value = "crescentOrder"
+  filterFor()
 }
 
 searchInput.addEventListener("keyup", searchByName)
@@ -85,7 +86,7 @@ const openPopup = (pokemon) => {
   height.textContent = `Altura: ${pokemon.height}`
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
-  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", "): "não há"}`
+  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", ") : "não há"}`
   weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
   popUp.style.visibility = "visible"
   overlay.style.display = "block"
