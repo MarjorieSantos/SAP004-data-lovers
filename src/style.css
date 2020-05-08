@@ -205,7 +205,9 @@ footer .container{
   visibility: hidden;
   transition: .5s;
   opacity: 1;
+  padding: 15px;
 }
+
 
 .overlay {
   opacity: 0.5;
@@ -243,7 +245,8 @@ footer .container{
 }
 
 .pop-up span {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  text-align: center;
 }
 
 .next_evolution {
