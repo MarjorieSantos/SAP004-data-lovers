@@ -208,7 +208,6 @@ footer .container{
   padding: 15px;
 }
 
-
 .overlay {
   opacity: 0.5;
   position: fixed;
@@ -330,7 +329,6 @@ h2 {
     text-align: center;
     font-size: 40px;
   }
- 
 }
 
 @media only screen and (min-width:768px) {
@@ -373,7 +371,6 @@ h2 {
     text-align: center;
     font-size: 80px;
   }
-  
 }
 
 @media only screen and (min-width: 1200px) {
@@ -428,6 +425,5 @@ h2 {
     text-align: center;
     font-size: 4em;
   }
-  
 }
 
