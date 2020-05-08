@@ -55,7 +55,6 @@ footer .container{
 }
 
 /*  main  */
-
 .main {
   min-height: 70vh;
 }
@@ -248,12 +247,12 @@ footer .container{
   text-align: center;
 }
 
-.next_evolution {
+.weightPercentage {
   text-align: center;
 }
 
 .name {
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 20px;
   color: black
 }
@@ -267,8 +266,7 @@ footer .container{
   padding: 10px;
 }
 
-.main .about-page .text-about h1,
-h2 {
+.main .about-page .text-about h1,h2 {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -295,7 +293,7 @@ h2 {
 }
 
 .pikachu-logo {
-  width: 10%;
+  width: 70px;
 }
 
 .pikachu-logo-container {
@@ -324,11 +322,6 @@ h2 {
   .main .filter-section .btn {
     margin: 0;
   }
-
-  .curiosity-title {
-    text-align: center;
-    font-size: 40px;
-  }
 }
 
 @media only screen and (min-width:768px) {
@@ -348,8 +341,8 @@ h2 {
     padding: 20px;
   }
 
-  .main .about-page .text-about {
-    flex-direction: row;
+  .main .about-page .text-about.curiosity{
+    display: block;
   }
 
   .main .about-page .text-about .column {
@@ -368,7 +361,6 @@ h2 {
   }
 
   .curiosity-title {
-    text-align: center;
     font-size: 80px;
   }
 }
@@ -421,9 +413,11 @@ h2 {
     width: 400px;
   }
 
+  .main .about-page .text-about.curiosity{
+    display: block;
+  }
+
   .curiosity-title {
-    text-align: center;
-    font-size: 4em;
+    font-size: 60px;
   }
 }
-
