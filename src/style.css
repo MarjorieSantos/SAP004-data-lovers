@@ -55,7 +55,6 @@ footer .container{
 }
 
 /*  main  */
-
 .main {
   min-height: 70vh;
 }
@@ -70,8 +69,7 @@ footer .container{
   text-align: center;
 }
 
-.main .filter-bar input,
-select {
+.main .filter-bar input,select {
   border: 1px solid white;
   border-radius: 50px;
   background: #FCFCFC;
@@ -150,7 +148,6 @@ select {
   bottom: 0;
   position: relative;
   padding: 50px;
-
 }
 
 .footer .external-links {
@@ -177,7 +174,6 @@ select {
 
 .hover-menu a {
   transition: color .3s ease;
-
 }
 
 .copy {
@@ -210,7 +206,6 @@ select {
   opacity: 1;
   padding: 15px;
 }
-
 
 .overlay {
   opacity: 0.5;
@@ -252,16 +247,15 @@ select {
   text-align: center;
 }
 
-.next_evolution {
+.weightPercentage {
   text-align: center;
 }
 
 .name {
-  font-weight: bolder;
-  font-size: 150%;
+  font-weight: bold;
+  font-size: 20px;
   color: black
 }
-
 
 /*  PÁGINA SOBRE  */
 .main .about-page .text-about {
@@ -272,8 +266,7 @@ select {
   padding: 10px;
 }
 
-.main .about-page .text-about h1,
-h2 {
+.main .about-page .text-about h1,h2 {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -300,7 +293,7 @@ h2 {
 }
 
 .pikachu-logo {
-  width: 10%;
+  width: 70px;
 }
 
 .pikachu-logo-container {
@@ -329,12 +322,6 @@ h2 {
   .main .filter-section .btn {
     margin: 0;
   }
-
-  .curiosity-title {
-    text-align: center;
-    font-size: 40px;
-  }
- 
 }
 
 @media only screen and (min-width:768px) {
@@ -354,8 +341,8 @@ h2 {
     padding: 20px;
   }
 
-  .main .about-page .text-about {
-    flex-direction: row;
+  .main .about-page .text-about.curiosity{
+    display: block;
   }
 
   .main .about-page .text-about .column {
@@ -374,10 +361,8 @@ h2 {
   }
 
   .curiosity-title {
-    text-align: center;
     font-size: 80px;
   }
-  
 }
 
 @media only screen and (min-width: 1200px) {
@@ -428,10 +413,11 @@ h2 {
     width: 400px;
   }
 
-  .curiosity-title {
-    text-align: center;
-    font-size: 4em;
+  .main .about-page .text-about.curiosity{
+    display: block;
   }
-  
-}
 
+  .curiosity-title {
+    font-size: 60px;
+  }
+}
