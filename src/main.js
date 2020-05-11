@@ -45,7 +45,7 @@ const searchByName = () => {
   result.forEach(renderPokemon)
 }
 
-const renderAllPokemons = () => {
+const renderAllPokemons = (pokemons) => {
   clearPokemonList()
   pokemons.forEach(renderPokemon)
 }
