@@ -88,15 +88,21 @@ const openPopup = (pokemon) => {
   candy.textContent = `Candy: ${pokemon.candy}`
   nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", ") : "não há"}`
   weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
-  popUp.style.visibility = "visible"
-  overlay.style.display = "block"
-  popUp.style.opacity = "1"
+  popUp.classList.add("v-visible")
+  popUp.classList.remove("v-hidden")
+  overlay.classList.add("d-block")
+  overlay.classList.remove("d-none")
+  popUp.classList.remove("opacity-zero")
+  popUp.classList.add("opacity-one")
 }
 
 const closePopup = () => {
-  popUp.style.visibility = "hidden"
-  popUp.style.opacity = "0"
-  overlay.style.display = "none"
+  popUp.classList.add("v-hidden")
+  popUp.classList.remove("v-visible")
+  popUp.classList.add("opacity-zero")
+  popUp.classList.remove("opacity-one")
+  overlay.classList.add("d-none")
+  overlay.classList.remove("d-block")
 }
 
 closeBtn.addEventListener("click", closePopup)

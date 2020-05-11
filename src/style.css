@@ -309,6 +309,30 @@ footer .container{
   padding: 10px;
 }
 
+.d-none{
+  display: none;
+}
+
+.d-block{
+  display: block;
+}
+
+.v-hidden{
+  visibility: hidden;
+}
+
+.v-visible{
+  visibility: visible;
+}
+
+.opacity-zero{
+  opacity: 0;
+}
+
+.opacity-one{
+  opacity: 1;
+}
+
 @media only screen and (min-width: 560px) {
   .main .filter-bar label {
     font-size: 15px;
@@ -341,6 +365,10 @@ footer .container{
     padding: 20px;
   }
 
+  .main .about-page .text-about {
+    flex-direction: row;
+  }
+  
   .main .about-page .text-about.curiosity{
     display: block;
   }
@@ -402,6 +430,10 @@ footer .container{
 
   .footer {
     padding: 16px;
+  }
+
+  .main .about-page .text-about {
+    flex-direction: row;
   }
 
   .main .about-page p {

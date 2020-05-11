@@ -12,11 +12,10 @@ describe('filterByName', () => {
     expect(() => filterByName(null, [])).toThrow(TypeError);
   });
 
-  it('should return  an "Pikachu" for "Pikachu"', () => {
+  it('should return an "Pikachu" for "pikachu"', () => {
     expect(filterByName(data.pokemon, "pikachu")[0].name).toBe("Pikachu")
   });
 });
-
 
 describe('sortData', () => {
   it('should be an function', () => {
@@ -29,7 +28,7 @@ describe('sortData', () => {
     expect(() => sortData(null, [])).toThrow(TypeError);
   });
 
-  it('should return "Abra" to "zubat" with sort order "A-Z"', () => {
+  it('should return "Abra" to "Zubat" with sort order "A-Z"', () => {
     expect(sortData(data.pokemon, "name", "A-Z")[0].name).toBe('Abra')
   });
 
@@ -46,10 +45,10 @@ describe('sortData', () => {
   });
 });
 
-describe('computeStats', () => {
-  it('should be an function', () => {
-    expect(typeof computeStats).toBe('function');
-  });
+ describe('computeStats', () => {
+   it('should be an function', () => {
+     expect(typeof computeStats).toBe('function');
+   });
 
   it('should throw typeError', () => {
     expect(() => computeStats()).toThrow(TypeError);
