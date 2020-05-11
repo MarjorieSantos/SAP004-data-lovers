@@ -49,7 +49,7 @@ const renderAllPokemons = () => {
   clearPokemonList()
   pokemons.forEach(renderPokemon)
 }
-renderAllPokemons()
+renderAllPokemons(pokemons)
 
 const resetOrder = () => {
 filter.value = "crescentOrder"

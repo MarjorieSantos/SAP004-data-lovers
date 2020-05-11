@@ -1,5 +1,5 @@
 import { filterByName, sortData, computeStats } from '../src/data.js';
-import data from '../src/data/pokemon/pokemon';
+import data from './mock';
 
 describe('filterByName', () => {
   it('should be an function', () => {
@@ -58,10 +58,10 @@ describe('computeStats', () => {
   });
 
   it('should return "16.6" for "6.9 kg', () => {
-    expect(computeStats(data.pokemon, { weight: "6.9 kg" })).toBe("16.6")
+    expect(computeStats(data.pokemon, { weight: "6.9 kg" })).toBe("16.4")
   });
 
   it('should return "30.5" for "12.5 kg', () => {
-    expect(computeStats(data.pokemon, { weight: "12.5 kg" })).toBe("30.5")
+    expect(computeStats(data.pokemon, { weight: "12.5 kg" })).toBe("30.9")
   });
 });
