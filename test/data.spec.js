@@ -13,7 +13,7 @@ describe('filterByName', () => {
   });
 
   it('should return an "Pikachu" for "pikachu"', () => {
-    expect(filterByName(pokemons, "pikachu")[0].name).toBe("Pikachu")
+    expect(filterByName(data.pokemon, "pikachu")[0].name).toBe("Pikachu")
   });
 });
 
@@ -29,19 +29,19 @@ describe('sortData', () => {
   });
 
   it('should return "Abra" to "Zubat" with sort order "A-Z"', () => {
-    expect(sortData(pokemons, "name", "A-Z")[0].name).toBe('Abra')
+    expect(sortData(data.pokemon, "name", "A-Z")[0].name).toBe('Abra')
   });
 
   it('should return "Zubat" to "Abra" with sort order "Z-A"', () => {
-    expect(sortData(pokemons, "name", "Z-A")[0].name).toBe('Zubat')
+    expect(sortData(data.pokemon, "name", "Z-A")[0].name).toBe('Zubat')
   });
 
   it('should return "Bulbasaur" to "Mew" with sort order "1-151"', () => {
-    expect(sortData(pokemons, "num", "crescentOrder")[0].name).toBe('Bulbasaur')
+    expect(sortData(data.pokemon, "num", "crescentOrder")[0].name).toBe('Bulbasaur')
   });
 
   it('should return "Mew" to "Bulbasaur" with sort order "151-1"', () => {
-    expect(sortData(pokemons, "num", "decreasingOrder")[0].name).toBe('Mew')
+    expect(sortData(data.pokemon, "num", "decreasingOrder")[0].name).toBe('Mew')
   });
 });
 
