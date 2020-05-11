@@ -45,11 +45,11 @@ const searchByName = () => {
   result.forEach(renderPokemon)
 }
 
-const renderAllPokemons = () => {
+const renderAllPokemons = (pokemons) => {
   clearPokemonList()
   pokemons.forEach(renderPokemon)
 }
-renderAllPokemons()
+renderAllPokemons(pokemons)
 
 const resetOrder = () => {
 filter.value = "crescentOrder"
