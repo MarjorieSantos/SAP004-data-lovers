@@ -16,9 +16,9 @@
       <a href="/"><img src="./fontes/logo-pokemon.svg" alt="Logo PokeApp"></a>
       <nav class="menu">
         <ul>
-          <li> <a href="#home"> Home </a></li>
-          <li> <a href="#sobre"> Sobre </a> </li>
-          <li> <a href="#curiosidades">Curiosidades</a> </li>
+          <li class="hover-menu"> <a href="index.html"> Home </a></li>
+          <li class="hover-menu"> <a href="sobre.html"> Sobre </a> </li>
+          <li class="hover-menu"> <a href="curiosidades.html">Curiosidades</a> </li>
         </ul>
       </nav>
     </section>
@@ -31,6 +31,9 @@
           <input type="text" id="search-input" class="focus">
         </div>
         <div>
+          <input type="reset" value="limpar" class="focus btn" id="clear-btn">
+        </div>
+        <div>
           <label for="filter-for">Ordernar por:</label>
           <select name="filter" id="filter-for" class="focus">
             <option disabled selected value="">Selecione:</option>
@@ -39,9 +42,6 @@
             <option value="crescentOrder">1 à 151</option>
             <option value="decreasingOrder">151 à 1</option>
           </select>
-        </div>
-        <div>
-          <input type="reset" value="limpar" class="focus btn" id="clear-btn">
         </div>
       </form>
     </section>
@@ -58,6 +58,7 @@
         <span class="weight"></span>
         <span class="candy"></span>
         <span class="next_evolution"></span>
+        <span class="weightPercentage"></span>
       </div>
       <div class="overlay"></div>
       <template id="pokemon-template">
@@ -66,7 +67,6 @@
           <img class="img" />
           <span class="num"></span>
           <span class="type"></span>
-          <span class="wekenesses"></span>
         </div>
       </template>
     </section>

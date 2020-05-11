@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 
+footer .container{
+  flex-flow: column;
+}
+
 .header {
   background: #1C2B59;
 }
@@ -51,6 +55,9 @@ body {
 }
 
 /*  main  */
+.main {
+  min-height: 70vh;
+}
 
 .main .filter-bar {
   background: linear-gradient(to right, #47bae7, #7de096);
@@ -74,17 +81,17 @@ body {
 }
 
 .main .filter-section {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main .filter-section div {
   margin: 0 5px;
 }
 
-.main .filter-section .btn{
-    margin-top: 15px;
+.main .filter-section .btn {
+  margin-top: 15px;
 }
 
 .focus:focus {
@@ -108,16 +115,18 @@ body {
   display: flex;
 }
 
-.card{
-    width: 130px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background: rgb(248,248,255);
-    padding: 15px;
-    text-align: center;
-    margin: 20px 10px;
-    transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.card {
+  width: 130px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: rgb(248, 248, 255);
+  padding: 15px;
+  text-align: center;
+  margin: 20px 10px;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: column;
 }
 
 .cards-section .card h2 {
@@ -134,10 +143,11 @@ body {
 }
 
 .footer {
-    width: 100%;
-    background-color: #1C2B59;
-    bottom: 0;
-    padding: 50px;
+  width: 100%;
+  background-color: #1C2B59;
+  bottom: 0;
+  position: relative;
+  padding: 50px;
 }
 
 .footer .external-links {
@@ -157,9 +167,19 @@ body {
   transition: color .3s ease;
 }
 
+.hover-menu a:hover {
+  color: #CCCCCC;
+  text-decoration: underline;
+}
+
+.hover-menu a {
+  transition: color .3s ease;
+}
+
 .copy {
+  text-align: center;
   color: white;
-  flex-grow: 1;
+  margin: 16px;
 }
 
 .card:hover {
@@ -184,6 +204,7 @@ body {
   visibility: hidden;
   transition: .5s;
   opacity: 1;
+  padding: 15px;
 }
 
 .overlay {
@@ -222,68 +243,213 @@ body {
 }
 
 .pop-up span {
-    margin-bottom: 10px;
-}
-
-@media only screen and (min-width: 560px){
-    .main .filter-bar label{
-        font-size: 15px;
-    }
-    .cards-section .card{
-        width: 140px;
-        padding: 20px;
-    }
-    .main .filter-section .btn{
-        margin: 0;
-    }
-}
-
-@media only screen and (min-width:768px){
-    .header .menu-nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 30px;
-    }
-    .main .filter-bar label{
-        font-size: 15px;
-    }
-    .cards-section .card{
-        width: 150px;
-        padding: 20px;
-    }
-}
-
-@media only screen and (min-width: 1200px){
-    .header .menu-nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .main .filter-bar label{
-        font-size: 20px;
-    }
-    .main .filter-bar input,select{
-        padding: 8px;
-        font-size: 12px;
-    }
-    .cards-section .card{
-        width: 160px;
-        padding: 25px;
-    }
-    .cards-section .card span{
-        font-size: 15px;
-    }
-    .pop-up{
-      width: 300px;
-      height: 400px;
-    }
-    .footer{
-        padding: 16px;
-    }
-}
-
-
-.next_evolution {
+  margin-bottom: 7px;
   text-align: center;
+}
+
+.weightPercentage {
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+  color: black
+}
+
+/*  PÁGINA SOBRE  */
+.main .about-page .text-about {
+  margin: 30px 30px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.main .about-page .text-about h1,h2 {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main .about-page .text-about h1::after,
+.main .about-page .text-about h2::after,
+.main .text-about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f2be22;
+  margin: 8px auto;
+}
+
+.main .about-page .img {
+  width: 75px;
+  margin: 0 auto;
+}
+
+.main .about-page .thank p {
+  text-align: center;
+}
+
+.pikachu-logo {
+  width: 70px;
+}
+
+.pikachu-logo-container {
+  text-align: center;
+}
+
+.curiosity-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.about-page{
+  padding: 10px;
+}
+
+.d-none{
+  display: none;
+}
+
+.d-block{
+  display: block;
+}
+
+.v-hidden{
+  visibility: hidden;
+}
+
+.v-visible{
+  visibility: visible;
+}
+
+.opacity-zero{
+  opacity: 0;
+}
+
+.opacity-one{
+  opacity: 1;
+}
+
+@media only screen and (min-width: 560px) {
+  .main .filter-bar label {
+    font-size: 15px;
+  }
+
+  .cards-section .card {
+    width: 140px;
+    padding: 20px;
+  }
+
+  .main .filter-section .btn {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .header .menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .main .filter-bar label {
+    font-size: 15px;
+  }
+
+  .cards-section .card {
+    width: 150px;
+    padding: 20px;
+  }
+
+  .main .about-page .text-about {
+    flex-direction: row;
+  }
+  
+  .main .about-page .text-about.curiosity{
+    display: block;
+  }
+
+  .main .about-page .text-about .column {
+    display: block;
+    width: 300px;
+  }
+
+  .main .about-page .text-about .left {
+    text-align: end;
+    margin-right: 30px;
+  }
+
+  .main .about-page .text-about .right {
+    text-align: start;
+    margin-left: 30px;
+  }
+
+  .curiosity-title {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header .menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main {
+    min-height: 90vh;
+  }
+
+  .main .filter-bar label {
+    font-size: 20px;
+  }
+
+  .main .filter-bar input,
+  select {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .cards-section .card {
+    width: 160px;
+    padding: 25px;
+  }
+
+  .cards-section .card span {
+    font-size: 15px;
+  }
+
+  .pop-up {
+    width: 300px;
+    height: 400px;
+  }
+
+  .footer {
+    padding: 16px;
+  }
+
+  .main .about-page .text-about {
+    flex-direction: row;
+  }
+
+  .main .about-page p {
+    font-size: 20px;
+  }
+
+  .main .about-page .text-about .column {
+    display: block;
+    width: 400px;
+  }
+
+  .main .about-page .text-about.curiosity{
+    display: block;
+  }
+
+  .curiosity-title {
+    font-size: 60px;
+  }
 }

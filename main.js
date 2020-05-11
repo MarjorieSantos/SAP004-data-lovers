@@ -1,6 +1,7 @@
 import {
   filterByName,
-  sortData
+  sortData,
+  computeStats
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -26,10 +27,10 @@ const renderPokemon = (pokemon) => {
   pokemonName.textContent = pokemon.name
   pokemonImage.setAttribute("src", pokemon.img)
   pokemonNumber.textContent = pokemon.num
-  pokemonType.textContent = pokemon.type
-  const templateDoned = document.importNode(template.content, true)
-  templateDoned.firstElementChild.addEventListener('click', () => openPopup(pokemon))
-  pokemonList.appendChild(templateDoned)
+  pokemonType.textContent = pokemon.type.toString().replace(",", ", ")
+  const clonedTemplate = document.importNode(template.content, true)
+  clonedTemplate.firstElementChild.addEventListener('click', () => openPopup(pokemon))
+  pokemonList.appendChild(clonedTemplate)
 }
 
 const clearPokemonList = () => {
@@ -44,30 +45,24 @@ const searchByName = () => {
   result.forEach(renderPokemon)
 }
 
-const renderAllPokemons = () => {
+const renderAllPokemons = (pokemons) => {
   clearPokemonList()
   pokemons.forEach(renderPokemon)
 }
-renderAllPokemons()
+renderAllPokemons(pokemons)
+
+const resetOrder = () => {
+filter.value = "crescentOrder"
+  filterFor()
+}
 
 searchInput.addEventListener("keyup", searchByName)
-clearBtn.addEventListener("click", renderAllPokemons)
+clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
-  if (filter.value == "A-Z") {
-    const arrayOrder = sortData(pokemons, "name", "A-Z")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value == "Z-A") {
-    const arrayOrder = sortData(pokemons, "name", "Z-A")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value == "crescentOrder") {
-    const arrayOrder = sortData(pokemons, "num", "crescentOrder")
-    renderAllPokemons(arrayOrder)
-  } else if (filter.value == "decreasingOrder") {
-    const arrayOrder = sortData(pokemons, "num", "decreasingOrder")
-    renderAllPokemons(arrayOrder)
-  }
+  const arrayOrder = sortData(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  renderAllPokemons(arrayOrder)
 }
 
 filter.addEventListener("change", filterFor)
@@ -82,24 +77,32 @@ const openPopup = (pokemon) => {
   const weight = popUp.querySelector(".weight")
   const candy = popUp.querySelector(".candy")
   const nextEvolution = popUp.querySelector(".next_evolution")
+  const weightPercentage = popUp.querySelector(".weightPercentage")
 
   name.textContent = pokemon.name
   img.setAttribute("src", pokemon.img)
   num.textContent = pokemon.num
-  type.textContent = `Pokémon tipo: ${pokemon.type}`
+  type.textContent = `Pokémon tipo: ${pokemon.type.join(", ")}`
   height.textContent = `Altura: ${pokemon.height}`
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
-  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", "): "não há"}`
-  popUp.style.visibility = "visible"
-  overlay.style.display = "block"
-  popUp.style.opacity = "1"
+  nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", ") : "não há"}`
+  weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
+  popUp.classList.add("v-visible")
+  popUp.classList.remove("v-hidden")
+  overlay.classList.add("d-block")
+  overlay.classList.remove("d-none")
+  popUp.classList.remove("opacity-zero")
+  popUp.classList.add("opacity-one")
 }
 
 const closePopup = () => {
-  popUp.style.visibility = "hidden"
-  popUp.style.opacity = "0"
-  overlay.style.display = "none"
+  popUp.classList.add("v-hidden")
+  popUp.classList.remove("v-visible")
+  popUp.classList.add("opacity-zero")
+  popUp.classList.remove("opacity-one")
+  overlay.classList.add("d-none")
+  overlay.classList.remove("d-block")
 }
 
 closeBtn.addEventListener("click", closePopup)
