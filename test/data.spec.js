@@ -1,31 +1,5 @@
 import { filterByName, sortData, computeStats } from '../src/data.js';
-
-const pokemons = [{
-  num: "001",
-  name: "Bulbasaur",
-  weight: "6.9 kg",
-}, {
-  num: "002",
-  name: "Pikachu",
-  weight: "6.0 kg",
-}, {
-  num: "003",
-  name: "SlowPoke",
-  weight: "36.0 kg",
-}, {
-  num: "004",
-  name: "Zubat",
-  weight: "7.5 kg",
-}, {
-  num: "005",
-  name: "Abra",
-  weight: "19.5 kg",
-}, {
-  num: "006",
-  name: "Mew",
-  weight: "4.0 kg",
-},
-]
+import data from './mock';
 
 describe('filterByName', () => {
   it('should be an function', () => {
@@ -82,11 +56,11 @@ describe('sortData', () => {
     expect(() => computeStats(null, [])).toThrow(TypeError);
   });
 
-  it('should return "33.3" for "6.9 kg"', () => {
-    expect(computeStats(pokemons, {weight: "6.9 kg"})).toBe("33.3")
+  it('should return "16.6" for "6.9 kg', () => {
+    expect(computeStats(data.pokemon, { weight: "6.9 kg" })).toBe("16.4")
   });
 
-  it('should return "83.3" for "36.0 kg"', () => {
-    expect(computeStats(pokemons, {weight: "36.0 kg"})).toBe("83.3")
+  it('should return "30.5" for "12.5 kg', () => {
+    expect(computeStats(data.pokemon, { weight: "12.5 kg" })).toBe("30.9")
   });
 });
