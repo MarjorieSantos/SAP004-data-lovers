@@ -1,3 +1,4 @@
+//Duplicate bulbassaur in order to fully test sort function (last ternary value)
 export default {
     "pokemon": [{
       "id": 1,
