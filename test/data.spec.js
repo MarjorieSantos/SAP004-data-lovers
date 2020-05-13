@@ -1,4 +1,4 @@
-import { filterByName, sortData, computeStats } from '../src/data.js';
+import { filterByName, sortBy, getWeitghtPercentage,filterByType } from '../src/data.js';
 import data from './mock';
 
 describe('filterByName', () => {
@@ -17,50 +17,72 @@ describe('filterByName', () => {
   });
 });
 
-describe('sortData', () => {
+describe('filterByType', () => {
   it('should be an function', () => {
-    expect(typeof sortData).toBe('function');
+    expect(typeof filterByType).toBe('function');
+  });
+
+  it('should throw TypeError', () => {
+    expect(() => filterByType()).toThrow(TypeError);
+    expect(() => filterByType(0)).toThrow(TypeError);
+    expect(() => filterByType(null, [])).toThrow(TypeError);
+  });
+
+  it('should return an "Charmander" for "Fire"', () => {
+    expect(filterByType(data.pokemon, "Fire")[0].name).toBe("Charmander")
+  });
+  
+  it('should return an "Jynx" for "Ice"', () => {
+    expect(filterByType(data.pokemon, "Ice")[2].name).toBe("Jynx")
+  });
+});
+
+describe('sortBy', () => {
+  it('should be an function', () => {
+    expect(typeof sortBy).toBe('function');
   });
 
   it('should throw typeError', () => {
-    expect(() => sortData()).toThrow(TypeError);
-    expect(() => sortData(0)).toThrow(TypeError);
-    expect(() => sortData(null, [])).toThrow(TypeError);
+    expect(() => sortBy()).toThrow(TypeError);
+    expect(() => sortBy(0)).toThrow(TypeError);
+    expect(() => sortBy(null, [])).toThrow(TypeError);
   });
 
   it('should return "Abra" to "Zubat" with sort order "A-Z"', () => {
-    expect(sortData(data.pokemon, "name", "A-Z")[0].name).toBe('Abra')
+    expect(sortBy(data.pokemon, "name", "A-Z")[0].name).toBe('Abra')
   });
 
   it('should return "Zubat" to "Abra" with sort order "Z-A"', () => {
-    expect(sortData(data.pokemon, "name", "Z-A")[0].name).toBe('Zubat')
+    expect(sortBy(data.pokemon, "name", "Z-A")[0].name).toBe('Zubat')
   });
 
   it('should return "Bulbasaur" to "Mew" with sort order "1-151"', () => {
-    expect(sortData(data.pokemon, "num", "crescentOrder")[0].name).toBe('Bulbasaur')
+    expect(sortBy(data.pokemon, "num", "crescentOrder")[0].name).toBe('Bulbasaur')
   });
 
   it('should return "Mew" to "Bulbasaur" with sort order "151-1"', () => {
-    expect(sortData(data.pokemon, "num", "decreasingOrder")[0].name).toBe('Mew')
+    expect(sortBy(data.pokemon, "num", "decreasingOrder")[0].name).toBe('Mew')
   });
 });
 
-describe('computeStats', () => {
+describe('getWeitghtPercentage', () => {
   it('should be an function', () => {
-    expect(typeof computeStats).toBe('function');
+    expect(typeof getWeitghtPercentage).toBe('function');
   });
 
   it('should throw typeError', () => {
-    expect(() => computeStats()).toThrow(TypeError);
-    expect(() => computeStats(0)).toThrow(TypeError);
-    expect(() => computeStats(null, [])).toThrow(TypeError);
+    expect(() => getWeitghtPercentage()).toThrow(TypeError);
+    expect(() => getWeitghtPercentage(0)).toThrow(TypeError);
+    expect(() => getWeitghtPercentage(null, [])).toThrow(TypeError);
   });
 
   it('should return "16.6" for "6.9 kg', () => {
-    expect(computeStats(data.pokemon, { weight: "6.9 kg" })).toBe("16.4")
+    expect(getWeitghtPercentage(data.pokemon, { weight: "6.9 kg" })).toBe("16.4")
   });
 
   it('should return "30.5" for "12.5 kg', () => {
-    expect(computeStats(data.pokemon, { weight: "12.5 kg" })).toBe("30.9")
+    expect(getWeitghtPercentage(data.pokemon, { weight: "12.5 kg" })).toBe("30.9")
   });
 });
+
+
