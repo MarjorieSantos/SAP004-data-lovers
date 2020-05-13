@@ -1,6 +1,7 @@
 import {
   filterByName,
   sortBy,
+  filterByType,
   getWeitghtPercentage
 } from './data.js';
 
