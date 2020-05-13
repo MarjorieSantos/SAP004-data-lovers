@@ -8,6 +8,9 @@ export const filterByName = (pokemons, searchedName) => {
 }
 
 export const filterByType = (pokemons, searchdType) => {
+  if (!Array.isArray(pokemons) || typeof searchdType !== "string") {
+    throw new TypeError()
+  }
   return pokemons.filter((pokemon) => {
     return pokemon.type.indexOf(searchdType) > -1
   })
