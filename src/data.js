@@ -7,6 +7,11 @@ export const filterByName = (pokemons, searchedName) => {
   })
 }
 
+export const filterByType = (pokemons, searchdType) => {
+  return pokemons.filter((pokemon) => {
+    return pokemon.type.indexOf(searchdType) > -1
+  })
+}
 
 export const sortData = (pokemons, sortBy, sortOrder) => {
   if (!Array.isArray(pokemons) ||
@@ -19,7 +24,7 @@ export const sortData = (pokemons, sortBy, sortOrder) => {
 
   if (sortOrder === "A-Z" || sortOrder === "crescentOrder") {
     data.sort(function (a, b) {
-      return a[sortBy] > b[sortBy] ? 1 : a[sortBy] < b[sortBy] ? -1 :  0;
+      return a[sortBy] > b[sortBy] ? 1 : a[sortBy] < b[sortBy] ? -1 : 0;
     })
   } else {
     data.sort(function (a, b) {
