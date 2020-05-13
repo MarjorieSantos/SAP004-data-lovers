@@ -1,4 +1,4 @@
-import { filterByName, sortBy, getWeitghtPercentage,filterByType } from '../src/data.js';
+import { filterByName, sortBy, getWeitghtPercentage, filterByType } from '../src/data.js';
 import data from './mock';
 
 describe('filterByName', () => {
@@ -31,7 +31,7 @@ describe('filterByType', () => {
   it('should return an "Charmander" for "Fire"', () => {
     expect(filterByType(data.pokemon, "Fire")[0].name).toBe("Charmander")
   });
-  
+
   it('should return an "Jynx" for "Ice"', () => {
     expect(filterByType(data.pokemon, "Ice")[2].name).toBe("Jynx")
   });
