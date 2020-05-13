@@ -45,10 +45,10 @@ describe('sortData', () => {
   });
 });
 
- describe('computeStats', () => {
-   it('should be an function', () => {
-     expect(typeof computeStats).toBe('function');
-   });
+describe('computeStats', () => {
+  it('should be an function', () => {
+    expect(typeof computeStats).toBe('function');
+  });
 
   it('should throw typeError', () => {
     expect(() => computeStats()).toThrow(TypeError);
