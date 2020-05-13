@@ -13,7 +13,7 @@ export const filterByType = (pokemons, searchdType) => {
   })
 }
 
-export const sortData = (pokemons, sortBy, sortOrder) => {
+export const sortBy = (pokemons, sortBy, sortOrder) => {
   if (!Array.isArray(pokemons) ||
     (sortBy !== "name" && sortBy !== "num") ||
     (sortOrder !== "A-Z" && sortOrder !== "Z-A" && sortOrder !== "crescentOrder" && sortOrder !== "decreasingOrder")) {
@@ -34,23 +34,7 @@ export const sortData = (pokemons, sortBy, sortOrder) => {
   return data
 };
 
-/*export const sortData = (data, sortBy, sortOrder) => {
-  if (typeof sortOrder !== "string" && typeof data !== "string") {
-    throw new TypeError()
-  }
-  if (sortOrder === "A-Z" || sortOrder === "crescentOrder") {
-    data.sort(function (a, b) {
-      return a[sortBy] > b[sortBy] ? 1 : a[sortBy] < b[sortBy] ? -1 : 0;
-    })
-  } else if (sortOrder === "Z-A" || sortOrder === "decreasingOrder") {
-    data.sort(function (a, b) {
-      return a[sortBy] < b[sortBy] ? 1 : a[sortBy] > b[sortBy] ? -1 : 0;
-    })
-  }
-  return data
-};*/
-
-export const computeStats = (pokemons, singleWeightPokemon) => {
+export const getWeitghtPercentage = (pokemons, singleWeightPokemon) => {
   if (!Array.isArray(pokemons) || typeof singleWeightPokemon !== "object") {
     throw new TypeError()
   }
