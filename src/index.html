@@ -34,13 +34,33 @@
           <input type="reset" value="limpar" class="focus btn" id="clear-btn">
         </div>
         <div>
-          <label for="filter-for">Ordernar por:</label>
-          <select name="filter" id="filter-for" class="focus">
-            <option disabled selected value="">Selecione:</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-            <option value="crescentOrder">1 à 151</option>
-            <option value="decreasingOrder">151 à 1</option>
+          <label for="filter-for">
+            <select name="filter" id="filter-for" class="focus">
+              <option disabled selected value="">Ordenar por:</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+              <option value="crescentOrder">1 à 151</option>
+              <option value="decreasingOrder">151 à 1</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label for="filter-by-type">
+            <select name="filter-by-type" id="filter-by-type" class="focus btn">
+              <option disabled selected value="">Filtrar por tipo:</option>
+              <option value="Grass">Grass</option>
+              <option value="Poison">Poison</option>
+              <option value="Fire">Fire</option>
+              <option value="Ice">Ice</option>
+              <option value="Flying">Flying</option>
+              <option value="Psychic">Psychic</option>
+              <option value="Electric">Electric</option>
+              <option value="Water">Water</option>
+              <option value="Ground">Ground</option>
+              <option value="Rock">Rock</option>
+              <option value="Bug">Bug</option>
+              <option value="Normal">Normal</option>
+          </label>
           </select>
         </div>
       </form>
