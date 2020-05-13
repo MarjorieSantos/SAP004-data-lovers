@@ -1,7 +1,7 @@
 import {
   filterByName,
-  sortData,
-  computeStats
+  sortBy,
+  getWeitghtPercentage
 } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
@@ -61,7 +61,7 @@ clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
-  const arrayOrder = sortData(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  const arrayOrder = sortBy(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
   renderAllPokemons(arrayOrder)
 }
 
@@ -87,7 +87,7 @@ const openPopup = (pokemon) => {
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
   nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", ") : "não há"}`
-  weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
+  weightPercentage.textContent = `${pokemon.name} é ${getWeitghtPercentage(pokemons, pokemon)}% mais pesado que os outros pokemons!`
   popUp.classList.add("v-visible")
   popUp.classList.remove("v-hidden")
   overlay.classList.add("d-block")
