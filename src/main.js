@@ -1,10 +1,4 @@
-import {
-  filterByName,
-  sortBy,
-  filterByType,
-  getWeitghtPercentage
-} from './data.js';
-
+import { filterByName, sortBy, filterByType, getWeitghtPercentage } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
@@ -17,7 +11,6 @@ const filter = document.querySelector("#filter-for");
 const selectByTypeInput = document.getElementById("filter-by-type")
 const closeBtn = document.getElementById("close")
 const overlay = document.querySelector(".overlay")
-
 
 const renderPokemon = (pokemon) => {
   const template = document.getElementById("pokemon-template")
