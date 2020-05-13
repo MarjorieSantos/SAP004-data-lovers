@@ -45,11 +45,9 @@ Para esse projeto foram usados:
 Inicialmente, foi feito um protótipo de baixa fidelidade do site, no qual foram propostas a principal(home) e mais duas páginas adicionais, a sobre e a de curiosidades.
 ***
 
-## 3.2 Pesquisa de usabilidade e definição de usuários
-Na pesquisa de usabilidade, os entrevistados, por meio de uma formulário, relataram o que gostaria de ver em uma página relacionada ao universo Pok
-***
-
-## 3.3 Teste de usabilidade
+## 3.2 Definição dos usuários e testes de usabilidade
+Para definir os usuário, elaboramos uma pesquisa no forms do google e após obter os dados dispostos, chegamos em duas personas e a partir delas elaboramos nossas histórias de usuário:
+* 
 Foram desenvolvidos testes unitários para identificar falhas em nossas funções e testes de usabilidade com alguns voluntários. Após realizado, foram propostos alguns ajustes mediante a página home e a disposição de alguns elementos.  Estes foram corrigidos e apresentados novamente, recebendo uma maior aprovação, possibilitando a melhoria de experiência do usuário.
 ***
 
