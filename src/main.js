@@ -1,5 +1,6 @@
 import {
   filterByName,
+  filterByType,
   sortData,
   computeStats
 } from './data.js';
@@ -13,6 +14,7 @@ const clearBtn = document.getElementById("clear-btn")
 const noResultFound = document.getElementById("no-results-found")
 const popUp = document.getElementById("pop-up-div")
 const filter = document.querySelector("#filter-for");
+const selectByTypeInput = document.getElementById("filter-by-type")
 const closeBtn = document.getElementById("close")
 const overlay = document.querySelector(".overlay")
 
@@ -52,7 +54,7 @@ const renderAllPokemons = (pokemons) => {
 renderAllPokemons(pokemons)
 
 const resetOrder = () => {
-filter.value = "crescentOrder"
+  filter.value = "crescentOrder"
   filterFor()
 }
 
@@ -67,6 +69,14 @@ const filterFor = () => {
 
 filter.addEventListener("change", filterFor)
 
+const searchByType = () => {
+  const searchType = selectByTypeInput.value
+  const searchResult = filterByType(pokemons, searchType)
+  clearPokemonList()
+  searchResult.forEach(renderPokemon)
+}
+
+selectByTypeInput.addEventListener("change", searchByType)
 
 const openPopup = (pokemon) => {
   const name = popUp.querySelector(".name")
