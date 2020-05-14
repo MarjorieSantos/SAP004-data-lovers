@@ -24,10 +24,11 @@ O PokéApp foi criado a partir de uma frustração dos usuários com páginas qu
 ***
 
 ## 3. Desenvolvimento
-Para esse projeto foram usados:
+As tecnologias utilizadas nesse projeto foram:
 * CSS
 * HTML
-* Vanilla JavaScript
+* ES6
+* Jest
 
 
 **Arquivos**
