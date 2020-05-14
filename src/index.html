@@ -26,16 +26,18 @@
   <main class="main">
     <section class="filter-bar">
       <form class="filter-section container">
-        <div>
-          <label for="search">Pesquisar por nome:</label>
-          <input type="text" id="search-input" class="focus">
+        <div class="zone">
+          <div class="btn-search">
+            <label for="search">Pesquisar por nome:</label>
+            <input type="text" id="search-input" class="focus">
+          </div>
+          <div class="btn-mobile">
+            <input type="reset" value="limpar" class="focus btn" id="clear-btn">
+          </div>
         </div>
-        <div>
-          <input type="reset" value="limpar" class="focus btn" id="clear-btn">
-        </div>
-        <div>
+        <div class="zone order">
           <label for="filter-for">
-            <select name="filter" id="filter-for" class="focus">
+            <select name="filter" id="filter-for" class="focus btn">
               <option disabled selected value="">Ordenar por:</option>
               <option value="A-Z">A-Z</option>
               <option value="Z-A">Z-A</option>
@@ -43,8 +45,6 @@
               <option value="decreasingOrder">151 à 1</option>
             </select>
           </label>
-        </div>
-        <div>
           <label for="filter-by-type">
             <select name="filter-by-type" id="filter-by-type" class="focus btn">
               <option disabled selected value="">Filtrar por tipo:</option>
@@ -70,8 +70,8 @@
       <div id="no-results-found" style="display: none;">Ops, não achamos esse Pokémon :(</div>
       <div class="pop-up" id="pop-up-div">
         <button class="close btn-close focus" id="close">X</button>
-        <h2 class="name">nome</h2>
-        <img class="img" />
+        <h2 class="name"></h2>
+        <img class="img"/>
         <span class="num"></span>
         <span class="type"></span>
         <span class="height"></span>
@@ -83,7 +83,7 @@
       <div class="overlay"></div>
       <template id="pokemon-template">
         <div class="card">
-          <h2 class="name">nome</h2>
+          <h2 class="name"></h2>
           <img class="img" />
           <span class="num"></span>
           <span class="type"></span>
