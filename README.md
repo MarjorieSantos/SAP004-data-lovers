@@ -32,11 +32,11 @@ As tecnologias utilizadas nesse projeto foram:
 
 
 **Arquivos**
-* `src/index.html` é a primeira página a ser exibida ao usuário.
-* `src/sobre.html` página adicional para informar ao usuário de como surgimos.
-* `src/curiosidades.html` página adicional que contém as curiosidades do universo Pokémon.
+* `src/index.html` Primeira página exibida ao usuario contendo todos os pokemons e filtros.
+* `src/sobre.html` Página para informar ao usuário sobre o projeto.
+* `src/curiosidades.html` página contendo as curiosidades do universo Pokémon.
 * `src/main.js` contém os códigos relacionados a manipulação do DOM.
-* `src/data.js` contém a elaboração das funções principais através de arrays e objetos.
+* `src/data.js` contém as funções puras utilizadas na manipulação do DOM.
 * `src/style.css` estilização da página.
 * `test/data.spec.js` contém os teste unitários das funções implementadas no arquivo data.js.
 
@@ -47,8 +47,24 @@ Inicialmente, foi feito um protótipo de baixa fidelidade do site, no qual foram
 ***
 
 ## 3.2 Definição dos usuários e testes de usabilidade
-Para definir os usuário, elaboramos uma pesquisa no forms do google e após obter os dados dispostos, chegamos em duas personas e a partir delas elaboramos nossas histórias de usuário:
-* 
+Para definir os usuário, elaboramos uma pesquisa no forms do google e após obter os dados dispostos, chegamos em duas personas e a partir delas elaboramos nossas histórias de usuário.
+
+### Personas:
+
+#### **Plínio** tem 22 anos,trabalha com administração e seu hobby é jogar videogames.
+**o que ele precisa:** 
+* conhecer os poderes dos pokémons, pois precisa dessa informação para poder usar em suas batalhas.
+* conhecer os tipos dos pokémons para saber qual seria ideal para usar em suas batalhas
+###
+
+#### Paulo tem 10 anos,estuda no fundamental e seu hobby é assistir animes.
+**o que ele precisa:**
+
+*  precisa das características principais de cada pokémon porque irá responder um teste para entrar em uma comunidade no facebook que deseja fazer parte
+
+* O amigo de paulo está curioso sobre pokemons, paulo quer indicar uma plataforma para que ele possa encontrar o que deseja
+
+ ###
 Foram desenvolvidos testes unitários para identificar falhas em nossas funções e testes de usabilidade com alguns voluntários. Após realizado, foram propostos alguns ajustes mediante a página home e a disposição de alguns elementos.  Estes foram corrigidos e apresentados novamente, recebendo uma maior aprovação, possibilitando a melhoria de experiência do usuário.
 ***
 
