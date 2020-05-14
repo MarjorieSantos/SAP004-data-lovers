@@ -9,6 +9,7 @@ body {
   color: #333;
   letter-spacing: 0.5px;
   background: #DEF5FE;
+  font-size: 20px;
 }
 
 .container {
@@ -35,7 +36,6 @@ body {
 
 .header .menu-nav a {
   text-decoration: none;
-  font-size: 20px;
   color: white;
   text-transform: uppercase;
   padding-left: 5px;
@@ -72,7 +72,6 @@ body {
   padding: 5px;
   font-weight: bold;
   text-align: center;
-  color: #333;
   font-size: 12px;
   display: block;
 }
@@ -197,10 +196,7 @@ body {
 
 .pop-up {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0; bottom: 0; left: 0; right: 0;
   margin: auto;
   width: 290px;
   height: 400px;
@@ -253,6 +249,7 @@ body {
 .pop-up span {
   margin-bottom: 7px;
   text-align: center;
+  font-size: 16px;
 }
 
 .weightPercentage {
@@ -261,21 +258,21 @@ body {
 
 .name {
   font-weight: bold;
+  color: black;
   font-size: 20px;
-  color: black
 }
 
 /*  PÁGINA SOBRE  */
+.main .about-page.section-about {
+  margin: 30px;
+}
+
 .main .about-page .text-about {
-  margin: 30px 30px;
-  text-align: justify;
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 
 .main .about-page .text-about h1,h2 {
-  font-size: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -298,21 +295,15 @@ body {
   text-align: center;
 }
 
-.pikachu-logo {
-  width: 70px;
-}
-
-.pikachu-logo-container {
-  text-align: center;
+.main .about-page .text-about .curiosity-content{
+  margin: 0 auto;
+  width: 325px;
+  word-wrap: break-word;
 }
 
 .curiosity-title {
   text-align: center;
-  font-size: 40px;
-}
-
-.about-page{
-  padding: 10px;
+  font-size: 30px;
 }
 
 .d-none{
@@ -353,6 +344,10 @@ body {
     width: 140px;
     padding: 20px;
   }
+
+  .main .about-page .text-about .curiosity-content {
+    width: 500px;
+}
 }
 
 @media only screen and (min-width:768px) {
@@ -361,6 +356,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 30px;
+  }
+
+  .main {
+    min-height: 90vh;
   }
 
   .main .filter-bar label {
@@ -372,8 +371,13 @@ body {
     padding: 20px;
   }
 
-  .main .about-page .text-about {
+  .main .about-page .text-about{
     flex-direction: row;
+    justify-content: center;
+  }
+
+  .main .about-page .text-about .content-about{
+    
   }
   
   .main .about-page .text-about.curiosity{
@@ -382,7 +386,7 @@ body {
 
   .main .about-page .text-about .column {
     display: block;
-    width: 300px;
+    width: 400px;
   }
 
   .main .about-page .text-about .left {
@@ -396,7 +400,7 @@ body {
   }
 
   .curiosity-title {
-    font-size: 80px;
+    font-size: 40px;
   }
 }
 
@@ -405,10 +409,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .main {
-    min-height: 90vh;
   }
 
   .main .filter-section .zone .btn-mobile{
@@ -444,24 +444,11 @@ body {
     height: 400px;
   }
 
-  .main .about-page .text-about {
-    flex-direction: row;
-  }
-
   .main .about-page p {
     font-size: 20px;
   }
 
-  .main .about-page .text-about .column {
-    display: block;
-    width: 400px;
-  }
-
-  .main .about-page .text-about.curiosity{
-    display: block;
-  }
-
-  .curiosity-title {
-    font-size: 60px;
+  .main .about-page .text-about .curiosity.curiosity-title h1 {
+    font-size: 40px;
   }
 }
