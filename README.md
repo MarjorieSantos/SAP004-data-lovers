@@ -24,18 +24,19 @@ O PokéApp foi criado a partir de uma frustração dos usuários com páginas qu
 ***
 
 ## 3. Desenvolvimento
-Para esse projeto foram usados:
+As tecnologias utilizadas nesse projeto foram:
 * CSS
 * HTML
-* Vanilla JavaScript
+* ES6
+* Jest
 
 
 **Arquivos**
-* `src/index.html` é a primeira página a ser exibida ao usuário.
-* `src/sobre.html` página adicional para informar ao usuário de como surgimos.
-* `src/curiosidades.html` página adicional que contém as curiosidades do universo Pokémon.
+* `src/index.html` Primeira página exibida ao usuario contendo todos os pokemons e filtros.
+* `src/sobre.html` Página para informar ao usuário sobre o projeto.
+* `src/curiosidades.html` página contendo as curiosidades do universo Pokémon.
 * `src/main.js` contém os códigos relacionados a manipulação do DOM.
-* `src/data.js` contém a elaboração das funções principais através de arrays e objetos.
+* `src/data.js` contém as funções puras utilizadas na manipulação do DOM.
 * `src/style.css` estilização da página.
 * `test/data.spec.js` contém os teste unitários das funções implementadas no arquivo data.js.
 
@@ -45,20 +46,51 @@ Para esse projeto foram usados:
 Inicialmente, foi feito um protótipo de baixa fidelidade do site, no qual foram propostas a principal(home) e mais duas páginas adicionais, a sobre e a de curiosidades.
 ***
 
-## 3.2 Definição dos usuários e testes de usabilidade
-Para definir os usuário, elaboramos uma pesquisa no forms do google e após obter os dados dispostos, chegamos em duas personas e a partir delas elaboramos nossas histórias de usuário:
-* 
-Foram desenvolvidos testes unitários para identificar falhas em nossas funções e testes de usabilidade com alguns voluntários. Após realizado, foram propostos alguns ajustes mediante a página home e a disposição de alguns elementos.  Estes foram corrigidos e apresentados novamente, recebendo uma maior aprovação, possibilitando a melhoria de experiência do usuário.
+## 3.2 Definição dos usuários:
+Para definir os usuário, elaboramos uma pesquisa no forms do google e após obter os dados dispostos, chegamos em duas personas e a partir delas elaboramos nossas histórias de usuário.
+
+### Personas:
+
+#### **Plínio** tem 22 anos,trabalha com administração e seu hobby é jogar videogames.
+**o que ele precisa:** 
+* conhecer os poderes dos pokémons, pois precisa dessa informação para poder usar em suas batalhas.
+* conhecer os tipos dos pokémons para saber qual seria ideal para usar em suas batalhas
+###
+
+#### Paulo tem 10 anos,estuda no fundamental e seu hobby é assistir animes.
+**o que ele precisa:**
+*  precisa das características principais de cada pokémon porque irá responder um teste para entrar em uma comunidade no facebook que deseja fazer parte
+
+* O amigo de paulo está curioso sobre pokemons, paulo quer indicar uma plataforma para que ele possa encontrar o que deseja
+ 
+**Com Base nas necessidades dos usuarios surgiram as seguintes historias:**
+* eu como usuário gostaria de poder pesquisar pelo nome do pokémon para não ter que rolar toda a página para achá-lo
+
+* eu como usuário gostaria de ver as informações dos pokémons em um card como (nome,numero,imagem,tipo etc)
+
+* eu como usuário gostaria de clicar no pokemon e saber mais sobre
+
+* eu como usuário gostaria de poder ver curiosidades sobre o pokémon em uma página
+
+## 3.3 Testes de Usuario e técnicos
+
+**Teste de usuario:** 
+ Após ter desenvolvido a interface principal da plataforma enviamos para alguns usuarios testarem, e após realizado foram propostos alguns ajustes mediante a página home e a disposição de alguns elementos.  Estes foram corrigidos e apresentados novamente, recebendo uma maior aprovação, possibilitando a melhoria de experiência do usuário.
+
+**teste técnico:**
+Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
 ***
 
 ## 3.4 Refatoração
 
 ***
 
-## 4. Considerações Técnicas
+## 4. Como baixar e utilizar o programa:
 :warning: Para usá-lo, você precisa instalar o node.js – visto que, eles são empacotados juntos.  :warning:
 
-Os comandos necessários para executar o programa em sua máquina são:
+**Os comandos necessários para executar o programa em sua máquina são:**
+
+* Fazer um Fork e/ou clonar o respositorio na sua máquina com o comando `git clone` + o link do repositorio
 
 * npm install - este irá auxiliar na instalação do projeto, no gerenciamento da versões e no gerenciamento de dependências necessárias para executa-lo.
 
@@ -67,3 +99,7 @@ Os comandos necessários para executar o programa em sua máquina são:
 * npm test - procura pelo script  **test** dentro do package.json, executar o que estiver dentro dele e mostrar se os testes passaram ou não.
 
 * npm deploy - publica uma versão do seu projeto no GitHub Pages.
+
+### caso não queira baixar o programa:
+
+você pode acessar a plataforma por aqui: [PokeApp](https://marjoriesantos.github.io/SAP004-data-lovers/ "clique aqui")
