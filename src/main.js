@@ -1,5 +1,5 @@
 //importei a constante filterPokemon do arquivo data.js para o main.js
-import { filterData, sortData } from './data.js';
+import { filterData, sortData, computeStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const listCards = document.querySelector("#list-cards")
@@ -43,4 +43,4 @@ filter.addEventListener("change", function (event) {
 
 })
 
-
+console.log(computeStats(data.pokemon))

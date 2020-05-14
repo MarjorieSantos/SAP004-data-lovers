@@ -54,3 +54,10 @@ export const sortData = (data, infoBy, infoOrder) => {
 };
 
 
+
+export const computeStats = (pokemons) => {
+  const total = pokemons.reduce((valueAccumulator, lonelyPokemon) => {
+    return valueAccumulator += Number(lonelyPokemon.weight.replace(" kg", ""))
+  }, 0)
+  return (total/pokemons.length).toFixed(1)
+}
