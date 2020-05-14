@@ -9,6 +9,11 @@ body {
   color: #333;
   letter-spacing: 0.5px;
   background: #DEF5FE;
+  font-size: 20px;
+}
+
+input, select, label, p, span, h1, h2{
+  text-align: center;
 }
 
 .container {
@@ -18,10 +23,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-footer .container{
-  flex-flow: column;
 }
 
 .header {
@@ -39,7 +40,6 @@ footer .container{
 
 .header .menu-nav a {
   text-decoration: none;
-  font-size: 20px;
   color: white;
   text-transform: uppercase;
   padding-left: 5px;
@@ -66,7 +66,6 @@ footer .container{
 .main .filter-bar label {
   font-size: 12px;
   color: white;
-  text-align: center;
 }
 
 .main .filter-bar input,select {
@@ -75,23 +74,33 @@ footer .container{
   background: #FCFCFC;
   padding: 5px;
   font-weight: bold;
-  text-align: center;
-  color: #333;
   font-size: 12px;
+  display: block;
 }
 
 .main .filter-section {
   padding: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main .filter-section .zone{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-.main .filter-section div {
-  margin: 0 5px;
+.main .filter-section .zone .btn-mobile{
+  margin-left: 55px;
+  margin-top: 20px;
 }
 
-.main .filter-section .btn {
-  margin-top: 15px;
+.main .filter-section .zone.order label:nth-child(1){
+  margin-right: 55px;
+}
+
+.main .filter-section .zone.order {
+  margin-top: 10px;
 }
 
 .focus:focus {
@@ -111,10 +120,6 @@ footer .container{
   padding: 30px;
 }
 
-.cards-section {
-  display: flex;
-}
-
 .card {
   width: 130px;
   border: 1px solid transparent;
@@ -130,7 +135,6 @@ footer .container{
 }
 
 .cards-section .card h2 {
-  display: inline;
   font-size: 15px;
 }
 
@@ -147,7 +151,11 @@ footer .container{
   background-color: #1C2B59;
   bottom: 0;
   position: relative;
-  padding: 50px;
+  padding: 40px;
+}
+
+.footer .container{
+  flex-flow: column;
 }
 
 .footer .external-links {
@@ -157,8 +165,6 @@ footer .container{
 .icon {
   color: white;
   padding: 0 16px;
-  align-self: end;
-  text-align: end;
   font-size: 25px;
 }
 
@@ -177,7 +183,6 @@ footer .container{
 }
 
 .copy {
-  text-align: center;
   color: white;
   margin: 16px;
 }
@@ -189,10 +194,7 @@ footer .container{
 
 .pop-up {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0; bottom: 0; left: 0; right: 0;
   margin: auto;
   width: 290px;
   height: 400px;
@@ -244,37 +246,33 @@ footer .container{
 
 .pop-up span {
   margin-bottom: 7px;
-  text-align: center;
-}
-
-.weightPercentage {
-  text-align: center;
+  font-size: 16px;
 }
 
 .name {
-  font-weight: bold;
+  color: black;
   font-size: 20px;
-  color: black
 }
 
 /*  PÁGINA SOBRE  */
+.main .about-page.section-about {
+  margin: 30px;
+}
+
 .main .about-page .text-about {
-  margin: 30px 30px;
-  text-align: justify;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+}
+
+.main .about-page .text-about p{
+  text-align: start;
 }
 
 .main .about-page .text-about h1,h2 {
-  font-size: 20px;
-  text-align: center;
   text-transform: uppercase;
 }
 
-.main .about-page .text-about h1::after,
-.main .about-page .text-about h2::after,
-.main .text-about h2::after {
+.main .about-page .text-about h1::after, .main .about-page .text-about h2::after, .main .text-about h2::after {
   content: "";
   display: block;
   width: 60px;
@@ -288,25 +286,14 @@ footer .container{
   margin: 0 auto;
 }
 
-.main .about-page .thank p {
-  text-align: center;
-}
-
-.pikachu-logo {
-  width: 70px;
-}
-
-.pikachu-logo-container {
-  text-align: center;
+.main .about-page .text-about .curiosity-content{
+  margin: 0 auto;
+  width: 325px;
 }
 
 .curiosity-title {
+  font-size: 30px;
   text-align: center;
-  font-size: 40px;
-}
-
-.about-page{
-  padding: 10px;
 }
 
 .d-none{
@@ -338,14 +325,19 @@ footer .container{
     font-size: 15px;
   }
 
+  .main .filter-section .zone .btn-mobile{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
   .cards-section .card {
     width: 140px;
     padding: 20px;
   }
 
-  .main .filter-section .btn {
-    margin: 0;
-  }
+  .main .about-page .text-about .curiosity-content {
+    width: 500px;
+}
 }
 
 @media only screen and (min-width:768px) {
@@ -356,8 +348,8 @@ footer .container{
     padding: 0 30px;
   }
 
-  .main .filter-bar label {
-    font-size: 15px;
+  .main {
+    min-height: 90vh;
   }
 
   .cards-section .card {
@@ -365,8 +357,14 @@ footer .container{
     padding: 20px;
   }
 
-  .main .about-page .text-about {
+  .main .about-page .text-about{
     flex-direction: row;
+    justify-content: center;
+  }
+
+  .main .about-page.section-about {
+    margin: 30px;
+    width: 700px;
   }
   
   .main .about-page .text-about.curiosity{
@@ -375,43 +373,41 @@ footer .container{
 
   .main .about-page .text-about .column {
     display: block;
-    width: 300px;
+    width: 400px;
   }
 
-  .main .about-page .text-about .left {
+  .main .about-page .text-about .left p{
     text-align: end;
     margin-right: 30px;
   }
 
-  .main .about-page .text-about .right {
+  .main .about-page .text-about .right p{
     text-align: start;
     margin-left: 30px;
   }
 
   .curiosity-title {
-    font-size: 80px;
+    font-size: 40px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .header .menu-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .main .filter-section .zone .btn-mobile{
+    margin-left: 55px;
+    margin-top: 0px;
   }
 
-  .main {
-    min-height: 90vh;
+  .main .filter-section .zone.order {
+    margin-top: 0px;
   }
 
   .main .filter-bar label {
     font-size: 20px;
   }
 
-  .main .filter-bar input,
-  select {
+  .main .filter-bar input,select {
     padding: 8px;
-    font-size: 12px;
+    display: inline-block;
   }
 
   .cards-section .card {
@@ -428,28 +424,11 @@ footer .container{
     height: 400px;
   }
 
-  .footer {
-    padding: 16px;
-  }
-
-  .main .about-page .text-about {
-    flex-direction: row;
-  }
-
   .main .about-page p {
     font-size: 20px;
   }
 
-  .main .about-page .text-about .column {
-    display: block;
-    width: 400px;
-  }
-
-  .main .about-page .text-about.curiosity{
-    display: block;
-  }
-
-  .curiosity-title {
-    font-size: 60px;
+  .main .about-page .text-about .curiosity.curiosity-title h1 {
+    font-size: 40px;
   }
 }

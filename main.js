@@ -1,9 +1,4 @@
-import {
-  filterByName,
-  sortData,
-  computeStats
-} from './data.js';
-
+import { filterByName, sortBy, filterByType, getWeitghtPercentage } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
@@ -13,9 +8,9 @@ const clearBtn = document.getElementById("clear-btn")
 const noResultFound = document.getElementById("no-results-found")
 const popUp = document.getElementById("pop-up-div")
 const filter = document.querySelector("#filter-for");
+const selectByTypeInput = document.getElementById("filter-by-type")
 const closeBtn = document.getElementById("close")
 const overlay = document.querySelector(".overlay")
-
 
 const renderPokemon = (pokemon) => {
   const template = document.getElementById("pokemon-template")
@@ -52,7 +47,7 @@ const renderAllPokemons = (pokemons) => {
 renderAllPokemons(pokemons)
 
 const resetOrder = () => {
-filter.value = "crescentOrder"
+  filter.value = "crescentOrder"
   filterFor()
 }
 
@@ -61,12 +56,20 @@ clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
-  const arrayOrder = sortData(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  const arrayOrder = sortBy(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
   renderAllPokemons(arrayOrder)
 }
 
 filter.addEventListener("change", filterFor)
 
+const searchByType = () => {
+  const searchType = selectByTypeInput.value
+  const searchResult = filterByType(pokemons, searchType)
+  clearPokemonList()
+  searchResult.forEach(renderPokemon)
+}
+
+selectByTypeInput.addEventListener("change", searchByType)
 
 const openPopup = (pokemon) => {
   const name = popUp.querySelector(".name")
@@ -87,7 +90,7 @@ const openPopup = (pokemon) => {
   weight.textContent = `Peso: ${pokemon.weight}`
   candy.textContent = `Candy: ${pokemon.candy}`
   nextEvolution.textContent = `Proxima evolução: ${pokemon.next_evolution ? pokemon.next_evolution.map(evolution => evolution.name).join(", ") : "não há"}`
-  weightPercentage.textContent = `${pokemon.name} é ${computeStats(pokemons, pokemon)}% mais pesado que os outros pokemons!`
+  weightPercentage.textContent = `${pokemon.name} é ${getWeitghtPercentage(pokemons, pokemon)}% mais pesado que os outros pokemons!`
   popUp.classList.add("v-visible")
   popUp.classList.remove("v-hidden")
   overlay.classList.add("d-block")
