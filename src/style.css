@@ -264,6 +264,10 @@ input, select, label, p, span, h1, h2{
   flex-direction: column;
 }
 
+.main .about-page .text-about p{
+  text-align: start;
+}
+
 .main .about-page .text-about h1,h2 {
   text-transform: uppercase;
 }
