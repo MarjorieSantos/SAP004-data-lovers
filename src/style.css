@@ -12,6 +12,10 @@ body {
   font-size: 20px;
 }
 
+input, select, label, p, span, h1, h2{
+  text-align: center;
+}
+
 .container {
   width: 100%;
   max-width: 900px;
@@ -62,7 +66,6 @@ body {
 .main .filter-bar label {
   font-size: 12px;
   color: white;
-  text-align: center;
 }
 
 .main .filter-bar input,select {
@@ -71,7 +74,6 @@ body {
   background: #FCFCFC;
   padding: 5px;
   font-weight: bold;
-  text-align: center;
   font-size: 12px;
   display: block;
 }
@@ -133,7 +135,6 @@ body {
 }
 
 .cards-section .card h2 {
-  display: inline;
   font-size: 15px;
 }
 
@@ -164,8 +165,6 @@ body {
 .icon {
   color: white;
   padding: 0 16px;
-  align-self: end;
-  text-align: end;
   font-size: 25px;
 }
 
@@ -184,7 +183,6 @@ body {
 }
 
 .copy {
-  text-align: center;
   color: white;
   margin: 16px;
 }
@@ -248,16 +246,10 @@ body {
 
 .pop-up span {
   margin-bottom: 7px;
-  text-align: center;
   font-size: 16px;
 }
 
-.weightPercentage {
-  text-align: center;
-}
-
 .name {
-  font-weight: bold;
   color: black;
   font-size: 20px;
 }
@@ -273,7 +265,6 @@ body {
 }
 
 .main .about-page .text-about h1,h2 {
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -291,18 +282,12 @@ body {
   margin: 0 auto;
 }
 
-.main .about-page .thank p {
-  text-align: center;
-}
-
 .main .about-page .text-about .curiosity-content{
   margin: 0 auto;
   width: 325px;
-  word-wrap: break-word;
 }
 
 .curiosity-title {
-  text-align: center;
   font-size: 30px;
 }
 
@@ -362,10 +347,6 @@ body {
     min-height: 90vh;
   }
 
-  .main .filter-bar label {
-    font-size: 15px;
-  }
-
   .cards-section .card {
     width: 150px;
     padding: 20px;
@@ -376,8 +357,9 @@ body {
     justify-content: center;
   }
 
-  .main .about-page .text-about .content-about{
-    
+  .main .about-page.section-about {
+    margin: 30px;
+    width: 700px;
   }
   
   .main .about-page .text-about.curiosity{
@@ -389,12 +371,12 @@ body {
     width: 400px;
   }
 
-  .main .about-page .text-about .left {
+  .main .about-page .text-about .left p{
     text-align: end;
     margin-right: 30px;
   }
 
-  .main .about-page .text-about .right {
+  .main .about-page .text-about .right p{
     text-align: start;
     margin-left: 30px;
   }
@@ -405,12 +387,6 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  .header .menu-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .main .filter-section .zone .btn-mobile{
     margin-left: 55px;
     margin-top: 0px;
@@ -418,7 +394,7 @@ body {
 
   .main .filter-section .zone.order {
     margin-top: 0px;
-}
+  }
 
   .main .filter-bar label {
     font-size: 20px;
@@ -426,7 +402,6 @@ body {
 
   .main .filter-bar input,select {
     padding: 8px;
-    font-size: 12px;
     display: inline-block;
   }
 
