@@ -4,6 +4,7 @@ import data from './data/pokemon/pokemon.js';
 
 const listCards = document.querySelector("#list-cards")
 
+
 function render(arrayPokemon) {
   listCards.innerHTML = ""
   arrayPokemon.forEach(function (pokemon) {
@@ -20,7 +21,9 @@ function render(arrayPokemon) {
 
 render(data.pokemon)
 
-// filterData(data.pokemon, "Bulbasaur")
+filterData(data.pokemon, data.pokemon.name) => {
+
+}
 
 
 
