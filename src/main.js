@@ -21,9 +21,7 @@ function render(arrayPokemon) {
 
 render(data.pokemon)
 
-filterData(data.pokemon, data.pokemon.name) => {
-
-}
+// filterData(data.pokemon, "Bulbasaur")
 
 
 
