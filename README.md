@@ -49,8 +49,12 @@ Após a filtrar as respostas daqueles que responderam nossa pesquisa, definimos 
 <img src="src/assets/assets-readme/protitipo-page-sobre.jpg" width="250" height="400">
 <img src="src/assets/assets-readme/prototipo-page-curiosidades.jpg" width="250" height="400">
 </div>
-e depois que testada pelos usuários voluntários, elaboramos ela no Adobe XD para podermos ter uma base melhor o que iriamos fazer. 
-
+e depois que testada pelos usuários voluntários, avaliamos as sugestões dados e elaboramos um novo design no Adobe XD para podermos ter uma base melhor o que iriamos fazer. 
+<div>
+<img src="src/assets/assets-readme/home-page.png" width="250" height="500">
+<img src="src/assets/assets-readme/modal-home.png" width="250" height="500">
+<img src="src/assets/assets-readme/sobre-page.png" width="250" height="500">
+</div>
 ***
 
 ## 3.2 Definição dos usuários:
