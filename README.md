@@ -44,17 +44,25 @@ As tecnologias utilizadas nesse projeto foram:
 
 ## 3.1 Protótipo de baixa fidelidade
 Após a filtrar as respostas daqueles que responderam nossa pesquisa, definimos uma paleta de cores referente ao tema e prototipamos com papel e caneta as páginas que faria parte da nossa plataforma.
+1. Página Home
+2. Página Sobre
+3. Página de Curiosidades
 <div>
 <img src="src/assets/assets-readme/prototipo-page-home.jpg" width="250" height="400">
 <img src="src/assets/assets-readme/protitipo-page-sobre.jpg" width="250" height="400">
 <img src="src/assets/assets-readme/prototipo-page-curiosidades.jpg" width="250" height="400">
 </div>
 e depois que testada pelos usuários voluntários, avaliamos as sugestões dados e elaboramos um novo design no Adobe XD para podermos ter uma base melhor o que iriamos fazer. 
+
+1. Página Home
+2. Página Home + Modal
+3. Página Sobre e Curiosidades
 <div>
 <img src="src/assets/assets-readme/home-page.png" width="250" height="500">
 <img src="src/assets/assets-readme/modal-home.png" width="250" height="500">
 <img src="src/assets/assets-readme/sobre-page.png" width="250" height="500">
 </div>
+
 ***
 
 ## 3.2 Definição dos usuários:
