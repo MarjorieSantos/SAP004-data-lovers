@@ -92,7 +92,7 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 <img src="src/assets/assets-readme/home-page.png" width="250" height="500">
 <img src="src/assets/assets-readme/modal-home.png" width="250" height="500">
 <img src="src/assets/assets-readme/sobre-page.png" width="250" height="500">
-<img src="src/assets/assets-readme/paleta-de-cores-pokeapp.png" width="450" height="200"> Paleta de cores
+<img src="src/assets/assets-readme/paleta-de-cores-pokeapp.png" width="550" height="200"> Paleta de cores
 </div>
 <br>
 
