@@ -95,7 +95,8 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 <img src="src/assets/assets-readme/sobre-page.png" width="250" height="500">
 </div>
 <br>
-**Testes Técnicos:** <br>
+**Testes Técnicos:**
+
  Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
 ***
 
