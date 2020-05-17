@@ -44,9 +44,11 @@ As tecnologias utilizadas nesse projeto foram:
 
 ## 3.1 Protótipo de baixa fidelidade
 Após a filtrar as respostas daqueles que responderam nossa pesquisa, definimos uma paleta de cores referente ao tema e prototipamos com papel e caneta as páginas que faria parte da nossa plataforma.
+<div>
 <img src="src/assets/assets-readme/prototipo-page-home.jpg" width="250" height="400">
 <img src="src/assets/assets-readme/protitipo-page-sobre.jpg" width="250" height="400">
 <img src="src/assets/assets-readme/prototipo-page-curiosidades.jpg" width="250" height="400">
+</div>
 e depois que testada pelos usuários voluntários, elaboramos ela no Adobe XD para podermos ter uma base melhor o que iriamos fazer. 
 
 ***
