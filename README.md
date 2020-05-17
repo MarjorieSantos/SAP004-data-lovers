@@ -14,9 +14,8 @@
 ***
 
 ## 1. Introdução
-O presente projeto foi realizado em duplas, com o objetivo de desenvolver uma página web que permitia vizualizar e manipular dados, fornecendo algumas funcionalidades de acordo com as necessidades e histórias do usuário.
+O presente projeto proposto pela Laboratória foi realizado em duplas, com o objetivo de desenvolver uma página web que permitia vizualizar e manipular dados, fornecendo algumas funcionalidades de acordo com as necessidades e histórias do usuário.
 O banco de dados escolhido foi o do Pokémon.
-
 ***
 
 ## 2. PokéApp
@@ -43,7 +42,7 @@ As tecnologias utilizadas nesse projeto foram:
 ***
 
 ## 3.1 Protótipo de baixa fidelidade
-Após a filtrar as respostas daqueles que responderam nossa pesquisa, definimos uma paleta de cores referente ao tema e prototipamos com papel e caneta as páginas que faria parte da nossa plataforma.
+Após a filtrar as respostas daqueles que responderam nossa pesquisa, prototipamos com papel e caneta as páginas que faria parte da nossa plataforma.
 1. Página Home
 2. Página Sobre
 3. Página de Curiosidades
@@ -84,20 +83,21 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 ## 3.3 Testes de Usabilidade e Técnicos
 
 **Teste de Usabilidade:** 
- Após desenvolvermos a interface principal, enviamos para algumas pessoas e depois que testada pelos usuários voluntários durante o processo de construção da página, avaliamos as sugestões dadas e elaboramos um novo design no Adobe XD para seguirmos como base. 
+ Após desenvolvermos a interface principal, enviamos para algumas pessoas e depois que testada pelos usuários voluntários durante o processo de construção da página, avaliamos as sugestões dadas e elaboramos um novo design no Adobe XD para seguirmos como base, incluindo a definição de uma paleta de cores referente ao tema.
 
 1. Página Home
 2. Página Home + Modal
 3. Página Sobre e Curiosidades
+4. Paleta de cores
 <div>
 <img src="src/assets/assets-readme/home-page.png" width="250" height="500">
 <img src="src/assets/assets-readme/modal-home.png" width="250" height="500">
 <img src="src/assets/assets-readme/sobre-page.png" width="250" height="500">
+<img src="src/assets/assets-readme/paleta-de-cores-pokeapp.png" width="400" height="200">
 </div>
 <br>
 
 **Testes Técnicos:**
-
  Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
 ***
 
