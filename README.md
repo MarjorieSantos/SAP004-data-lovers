@@ -43,7 +43,10 @@ As tecnologias utilizadas nesse projeto foram:
 ***
 
 ## 3.1 Protótipo de baixa fidelidade
-Inicialmente, foi feito um protótipo de baixa fidelidade do site, no qual foram propostas a principal(home) e mais duas páginas adicionais, a sobre e a de curiosidades.
+Após a filtrar as respostas daqueles que responderam nossa pesquisa, definimos uma paleta de cores referente ao tema e prototipamos com papel e caneta as páginas que faria parte da nossa plataforma.
+
+e depois que testada pelos usuários voluntários, elaboramos ela no Adobe XD para podermos ter uma base melhor o que iriamos fazer. 
+
 ***
 
 ## 3.2 Definição dos usuários:
