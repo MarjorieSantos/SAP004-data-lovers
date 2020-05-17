@@ -94,9 +94,8 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 <img src="src/assets/assets-readme/modal-home.png" width="250" height="500">
 <img src="src/assets/assets-readme/sobre-page.png" width="250" height="500">
 </div>
-
-**Testes Técnicos:**
-
+<br>
+**Testes Técnicos:** <br>
  Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
 ***
 
