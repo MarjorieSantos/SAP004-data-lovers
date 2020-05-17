@@ -96,7 +96,8 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 </div>
 
 **Testes Técnicos:**
-Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
+
+ Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
 ***
 
 ## 3.4 Refatoração
