@@ -37,7 +37,8 @@ As tecnologias utilizadas nesse projeto foram:
 * `src/style.css` estilização da página.
 * `test/data.spec.js` contém os teste unitários das funções implementadas no arquivo data.js.
 
-Em relação ao código, refatoramos nossas funções no arquivo `data.js`, deixando-as puras e com nomes mais específicos. Assim como nos arquivos `main` e no `HTML`, com as classes e id's.
+Em relação ao código, 
+refatoramos nossas funções no arquivo `data.js`, deixando-as puras e com nomes mais específicos. Assim como nos arquivos `main` e no `HTML`, com as classes e id's.
 
 ***
 
