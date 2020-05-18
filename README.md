@@ -8,7 +8,6 @@
 * [3.1 Protótipo de baixa fidelidade](#3.1-prototipo-de-baixa-fidelidade)
 * [3.2 Pesquisa de usabilidade e definição de usuários](#3.2-pesquisa-de-usabilidade-definicao-de-usuarios)
 * [3.3 Teste de usabilidade](#3.3-teste-de-usabilidade)
-* [3.4 Refatoração](#3.4-refatoracao)
 * [4. Considerações técnicas](#4-consideracoes-tecnicas)
 
 ***
@@ -19,7 +18,7 @@ O banco de dados escolhido foi o do Pokémon.
 ***
 
 ## 2. PokéApp
-O PokéApp foi criado a partir de uma frustração dos usuários com páginas que possuem muita informação e que não são fáceis de localizar o que se procura. Com isso, tivemos o intuito de fornecer aos visitantes uma experiência agradável, onde tudo pode ser localizado com objetividade e clareza. A plataforma permite você descobrir o mundo Pokémon e explorar cada um deles e suas peculiaridades.
+O PokéApp foi criado a partir de uma frustração dos usuários com páginas que possuem muita informação e que não são fáceis de localizar o que se procura. Com isso, tivemos o intuito de fornecer aos visitantes uma experiência agradável, onde tudo pode ser localizado com objetividade e clareza. A plataforma permite você descobrir o mundo Pokémon e explorar cada um deles e suas peculiaridades, podendo ser acessada de qualquer dispositivo movél.
 ***
 
 ## 3. Desenvolvimento
@@ -28,7 +27,6 @@ As tecnologias utilizadas nesse projeto foram:
 * HTML
 * ES6
 * Jest
-
 
 **Arquivos**
 * `src/index.html` Primeira página exibida ao usuario contendo todos os pokemons e filtros.
@@ -39,10 +37,12 @@ As tecnologias utilizadas nesse projeto foram:
 * `src/style.css` estilização da página.
 * `test/data.spec.js` contém os teste unitários das funções implementadas no arquivo data.js.
 
+Em relação ao código, refatoramos nossas funções no arquivo `data.js`, deixando-as puras e com nomes mais específicos. Assim como nos arquivos `main` e no `HTML`, com as classes e id's.
+
 ***
 
 ## 3.1 Protótipo de baixa fidelidade
-Após a filtrar as respostas daqueles que responderam nossa pesquisa, prototipamos com papel e caneta as páginas que faria parte da nossa plataforma.
+Após a filtrar as respostas daqueles que responderam nossa pesquisa, prototipamos com papel e caneta as páginas que fariam parte da nossa plataforma.
 1. Página Home
 2. Página Sobre
 3. Página de Curiosidades
@@ -54,8 +54,8 @@ Após a filtrar as respostas daqueles que responderam nossa pesquisa, prototipam
 
 ***
 
-## 3.2 Definição dos usuários:
-Para definir os usuário, elaboramos uma pesquisa no forms do google e após obter os dados dispostos, chegamos em duas personas e a partir delas elaboramos nossas histórias de usuário.
+## 3.2 Definição das personas:
+Para definirmos nossas personas, elaboramos uma perquisa no Google Forms e enviamos para algumas pessoas 
 
 ### Personas:
 
@@ -74,9 +74,13 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 **Com Base nas necessidades dos usuários surgiram as seguintes historias:**
 * eu como usuário gostaria de poder pesquisar pelo nome do pokémon para não ter que rolar toda a página para achá-lo;
 
-* eu como usuário gostaria de ver as informações dos pokémons em um card como (nome,numero,imagem,tipo etc);
+* eu como usuário gostaria de ver as informações dos pokémons em um card como (nome, número, imagem, tipo, etc);
 
-* eu como usuário gostaria de clicar no pokemon e saber mais sobre;
+* eu como usuário gostia de ordenar os pokémons em ordem crescente ou decrescente, tanto númerica quando alfabética;
+
+* eu como usuário gostaria de poder filtrar por tipo e também ordenar aqueles já filtrados;
+
+* eu como usuário gostaria de clicar no card do pokémon e saber mais sobre ele;
 
 * eu como usuário gostaria de poder ver curiosidades sobre o pokémon em uma página.
 
@@ -98,10 +102,6 @@ Para definir os usuário, elaboramos uma pesquisa no forms do google e após obt
 
 **Testes Técnicos:**
  Foram desenvolvidos testes unitários com jest para identificar falhas em nossas funções e  assim  possibilitando a refatoração das mesmas.
-***
-
-## 3.4 Refatoração
-
 ***
 
 ## 4. Como baixar e utilizar o programa:
