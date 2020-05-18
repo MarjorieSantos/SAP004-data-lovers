@@ -9,7 +9,7 @@ describe('filterByName', () => {
   it('should throw TypeError', () => {
     expect(() => filterByName()).toThrow(TypeError);
     expect(() => filterByName(0)).toThrow(TypeError);
-    expect(() => filterByName(null, [])).toThrow(TypeError);
+    expect(() => filterByName(null)).toThrow(TypeError);
   });
 
   it('should return an "Pikachu" for "pikachu"', () => {
@@ -25,7 +25,7 @@ describe('filterByType', () => {
   it('should throw TypeError', () => {
     expect(() => filterByType()).toThrow(TypeError);
     expect(() => filterByType(0)).toThrow(TypeError);
-    expect(() => filterByType(null, [])).toThrow(TypeError);
+    expect(() => filterByType(null)).toThrow(TypeError);
   });
 
   it('should return an "Charmander" for "Fire"', () => {
@@ -45,7 +45,7 @@ describe('sortBy', () => {
   it('should throw typeError', () => {
     expect(() => sortBy()).toThrow(TypeError);
     expect(() => sortBy(0)).toThrow(TypeError);
-    expect(() => sortBy(null, [])).toThrow(TypeError);
+    expect(() => sortBy(null)).toThrow(TypeError);
   });
 
   it('should return "Abra" to "Zubat" with sort order "A-Z"', () => {
@@ -73,7 +73,7 @@ describe('getWeitghtPercentage', () => {
   it('should throw typeError', () => {
     expect(() => getWeitghtPercentage()).toThrow(TypeError);
     expect(() => getWeitghtPercentage(0)).toThrow(TypeError);
-    expect(() => getWeitghtPercentage(null, [])).toThrow(TypeError);
+    expect(() => getWeitghtPercentage(null)).toThrow(TypeError);
   });
 
   it('should return "16.6" for "6.9 kg', () => {
