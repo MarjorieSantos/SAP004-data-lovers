@@ -50,7 +50,8 @@ renderAllPokemons(pokemons)
 const resetOrder = () => {
   filter.value = "crescentOrder"
   selectByTypeInput.value = ""
-  renderAllPokemons(filterAllPokemons)
+  showFilterPokemons = pokemons
+  renderAllPokemons(pokemons)
 }
 
 searchInput.addEventListener("keyup", searchByName)
