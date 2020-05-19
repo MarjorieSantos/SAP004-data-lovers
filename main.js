@@ -2,6 +2,7 @@ import { filterByName, sortBy, filterByType, getWeitghtPercentage } from './data
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
+let showFilterPokemons = data.pokemon
 const searchInput = document.getElementById("search-input")
 const pokemonList = document.getElementById("pokemon-list")
 const clearBtn = document.getElementById("clear-btn")
@@ -48,7 +49,8 @@ renderAllPokemons(pokemons)
 
 const resetOrder = () => {
   filter.value = "crescentOrder"
-  filterFor()
+  selectByTypeInput.value = ""
+  renderAllPokemons(pokemons)
 }
 
 searchInput.addEventListener("keyup", searchByName)
@@ -56,7 +58,8 @@ clearBtn.addEventListener("click", resetOrder)
 
 
 const filterFor = () => {
-  const arrayOrder = sortBy(pokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  showFilterPokemons = sortBy(showFilterPokemons, filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value)
+  const arrayOrder = showFilterPokemons
   renderAllPokemons(arrayOrder)
 }
 
@@ -65,8 +68,12 @@ filter.addEventListener("change", filterFor)
 const searchByType = () => {
   const searchType = selectByTypeInput.value
   const searchResult = filterByType(pokemons, searchType)
+  showFilterPokemons = searchResult
   clearPokemonList()
   searchResult.forEach(renderPokemon)
+  if(filterFor === filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value){
+    searchResult.forEach(filterFor)
+  }
 }
 
 selectByTypeInput.addEventListener("change", searchByType)

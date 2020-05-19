@@ -33,7 +33,6 @@ input, select, label, p, span, h1, h2{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
   padding-top: 15px;
   height: 157px;
 }
@@ -354,7 +353,6 @@ input, select, label, p, span, h1, h2{
 
   .cards-section .card {
     width: 150px;
-    padding: 20px;
   }
 
   .main .about-page .text-about{
@@ -363,12 +361,12 @@ input, select, label, p, span, h1, h2{
   }
 
   .main .about-page.section-about {
-    margin: 30px;
     width: 700px;
   }
   
   .main .about-page .text-about.curiosity{
     display: block;
+    margin-bottom: 50px;
   }
 
   .main .about-page .text-about .column {
@@ -426,6 +424,10 @@ input, select, label, p, span, h1, h2{
 
   .main .about-page p {
     font-size: 20px;
+  }
+
+  .main .about-page .text-about .curiosity-content {
+    width: 700px;
   }
 
   .main .about-page .text-about .curiosity.curiosity-title h1 {
