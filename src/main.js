@@ -72,7 +72,7 @@ const searchByType = () => {
   showFilterPokemons = searchResult
   clearPokemonList()
   searchResult.forEach(renderPokemon)
-  if(filterFor === filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value){
+  if (filterFor === filter.value === "A-Z" || filter.value === "Z-A" ? "name" : "num", filter.value) {
     searchResult.forEach(filterFor)
   }
 }
