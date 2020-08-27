@@ -3,18 +3,18 @@ import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
 let showFilterPokemons = data.pokemon
-const searchInput = document.getElementById("search-input")
-const pokemonList = document.getElementById("pokemon-list")
-const clearBtn = document.getElementById("clear-btn")
-const noResultFound = document.getElementById("no-results-found")
-const popUp = document.getElementById("pop-up-div")
+const searchInput = document.querySelector("#search-input")
+const pokemonList = document.querySelector("#pokemon-list")
+const clearBtn = document.querySelector("#clear-btn")
+const noResultFound = document.querySelector("#no-results-found")
+const popUp = document.querySelector("#pop-up-div")
 const filter = document.querySelector("#filter-for");
-const selectByTypeInput = document.getElementById("filter-by-type")
-const closeBtn = document.getElementById("close")
+const selectByTypeInput = document.querySelector("#filter-by-type")
+const closeBtn = document.querySelector("#close")
 const overlay = document.querySelector(".overlay")
 
 const renderPokemon = (pokemon) => {
-  const template = document.getElementById("pokemon-template")
+  const template = document.querySelector("#pokemon-template")
   const card = template.content.querySelector(".card")
   const pokemonName = card.querySelector(".name")
   const pokemonImage = card.querySelector(".img")
